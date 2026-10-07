@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b6b4a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EcoEletro">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<title>EcoEletro | Descarte certo de lixo eletrônico</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap">
+<style>
+:root{--bg:#f1f6ef;--card:#fff;--ink:#12332b;--mut:#566a62;--g:#1f8a4c;--g2:#0b6b4a;--b:#1f7fd0;--line:#dbe5da;--mint:#e3f2e5;--warn:#fff3df;--warnl:#ecd2a6;--warnt:#6b4a1f;--hero1:#0b6b4a;--hero2:#2fae62;--hero3:#9ad63f;--nav:rgba(252,253,251,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88)}}
+:root[data-theme="dark"]{--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88)}
+*{box-sizing:border-box}html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;letter-spacing:-.02em;margin:0}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer;touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+.app{max-width:480px;margin:0 auto;min-height:100dvh;padding-bottom:92px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:9px;font:800 1.3rem Sora,sans-serif;letter-spacing:-.04em}.brand b{color:var(--g)}
+.city{font-size:.8rem;color:var(--mut);font-weight:600}
+main{padding:0 16px 16px}.screen{display:none}.screen.on{display:block}
+.hero{margin:0 -16px 16px;padding:26px 20px 30px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2) 62%,var(--hero3));position:relative;overflow:hidden;border-radius:0 0 28px 28px}
+.hero h1{font-size:1.75rem;line-height:1.1;max-width:62%}.hero p{margin:10px 0 16px;max-width:60%;font-size:.95rem;line-height:1.4;color:#eaf8e6}
+.hero svg{position:absolute;right:-6px;bottom:6px;width:46%;max-width:210px}
+.cta{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:0;border-radius:14px;background:#fff;color:#0b5a3d;font-weight:800;box-shadow:0 6px 16px #0003;position:relative;z-index:1}
+.btn{min-height:48px;border:0;border-radius:14px;padding:0 18px;background:var(--g2);color:#fff;font-weight:800}.btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.full{width:100%}
+.status{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:14px}
+.dot{width:12px;height:12px;border-radius:50%;background:#aaa;flex:none}.dot.open{background:#2fb866;box-shadow:0 0 0 5px #2fb86633}
+.status strong{display:block;font-family:Sora,sans-serif;font-size:1.02rem}.status span{font-size:.85rem;color:var(--mut)}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.q{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 4px 12px;background:var(--card);border:1px solid var(--line);border-radius:18px;font-size:.78rem;font-weight:700;line-height:1.15;text-align:center;min-height:98px}
+.q svg,.tab svg{width:28px;height:28px;fill:none;stroke:var(--g);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.q:active{background:var(--mint)}
+.sec{display:flex;justify-content:space-between;align-items:center;margin:20px 2px 10px}.sec h2{font-size:1.15rem}.link{border:0;background:none;color:var(--g);font-weight:800;font-size:.85rem;padding:8px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:10px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:4px 10px;font-size:.74rem;font-weight:800;background:var(--mint);color:var(--g2)}
+.badge.closed{background:#8882;color:var(--mut)}
+.card h3{font-size:1.02rem;margin-bottom:6px}.meta{display:flex;gap:8px;font-size:.88rem;color:var(--mut);margin-top:5px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px}.src{font-size:.74rem;color:var(--mut)}.src a{color:var(--g)}
+.go{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:12px;background:var(--mint);color:var(--g2);font-weight:800;font-size:.85rem;text-decoration:none;white-space:nowrap}
+.search{display:flex;align-items:center;gap:10px;height:52px;padding:0 14px;background:var(--card);border:1px solid var(--line);border-radius:16px}.search input{flex:1;min-width:0;border:0;outline:0;background:none;font-size:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:12px -16px;padding:0 16px 2px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.85rem;font-weight:700;color:var(--mut)}.chip.on{background:var(--mint);border-color:var(--g);color:var(--g2)}
+.title{font-size:1.9rem;line-height:1.1;margin:18px 2px 6px}.intro{color:var(--mut);margin:0 2px 14px;font-size:.95rem}
+.note{display:flex;gap:10px;background:var(--warn);border:1px solid var(--warnl);color:var(--warnt);border-radius:14px;padding:12px;font-size:.84rem;margin-top:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px}summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;font-weight:700;cursor:pointer;min-height:56px}summary::-webkit-details-marker{display:none}
+summary .ic{font-size:1.4rem}summary:after{content:"＋";margin-left:auto;color:var(--g);font-weight:800}details[open] summary:after{content:"－"}
+details p{margin:0;padding:0 16px 14px 52px;font-size:.9rem;color:var(--mut)}
+.check{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px;cursor:pointer}
+.check input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--g2);flex:none}.check b{display:block}.check span{font-size:.85rem;color:var(--mut)}
+.tip{display:flex;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px}.tip i{flex:none;width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-style:normal;font-size:1.3rem}.tip b{display:block}.tip span{font-size:.88rem;color:var(--mut)}
+.inst{display:none;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--mint);border:1px solid var(--g);margin-bottom:14px}.inst.on{display:flex}.inst img{width:48px;height:48px;border-radius:12px}.inst div{flex:1;line-height:1.25}.inst b{display:block}.inst span{font-size:.82rem;color:var(--mut)}.inst .btn{min-height:42px;padding:0 14px}
+.bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden;margin:6px 0 16px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g),var(--hero3));transition:width .3s}
+.impact{display:flex;align-items:center;gap:16px;padding:18px;border-radius:20px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2));margin-bottom:14px}
+.impact big{font:800 2.6rem/1 Sora,sans-serif}.impact span{font-size:.9rem;color:#e6f6e6}
+.step{display:flex;gap:10px;align-items:center;margin:12px 0}.step button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:1.3rem;font-weight:800}.step output{min-width:36px;text-align:center;font:800 1.3rem Sora,sans-serif}
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);z-index:6}
+.tab{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;min-height:54px;font-size:.72rem;font-weight:700;color:var(--mut)}.tab svg{width:24px;height:24px;stroke:currentColor}.tab.on{color:var(--g)}
+dialog{width:min(480px,100%);max-width:none;margin:auto auto 0;padding:0;border:0;border-radius:24px 24px 0 0;background:var(--card);color:var(--ink);max-height:90dvh}dialog::backdrop{background:#0a1a1480}
+form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:grid;gap:12px;margin:14px 0}.fg label{display:grid;gap:5px;font-size:.82rem;font-weight:700;color:var(--mut)}
+.fg input,.fg select{min-height:48px;border:1px solid var(--line);border-radius:12px;padding:0 12px;background:var(--bg);font-size:16px}
+.fb{display:flex;gap:8px}.fb .btn{flex:1}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}.toast.show{opacity:1}
+@media(max-width:360px){.hero h1{font-size:1.5rem}.q{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="brand"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#6dbd39" stroke-width="6" stroke-dasharray="38 76" stroke-linecap="round"/><circle cx="20" cy="20" r="18" fill="none" stroke="#1f7fd0" stroke-width="6" stroke-dasharray="38 76" stroke-dashoffset="-38" stroke-linecap="round"/><circle cx="20" cy="20" r="18" fill="none" stroke="#2fae62" stroke-width="6" stroke-dasharray="30 83" stroke-dashoffset="-76" stroke-linecap="round"/></svg>Eco<b>Eletro</b></div><div class="city">Juiz de Fora, MG</div></header>
+<main>
+
+<section class="screen on" id="s-home">
+ <div class="hero"><h1>Descarte seu lixo eletrônico do jeito certo</h1><p>Encontre um ecoponto, prepare o aparelho e proteja seus dados.</p><button class="cta" data-go="points">Ver ecopontos</button>
+ <svg viewBox="0 0 240 190" aria-hidden="true"><rect x="83" y="105" width="126" height="65" rx="11" fill="#3fae2a"/><path d="M75 105h143l-9 15H83z" fill="#187d37"/><path d="m141 134 8-8 8 8-8 8zm0 16 8-8 8 8-8 8z" fill="#efffcb"/><rect x="103" y="43" width="54" height="57" rx="6" transform="rotate(-8 103 43)" fill="#172f3f"/><rect x="109" y="49" width="42" height="42" rx="3" transform="rotate(-8 109 49)" fill="#91c7bf"/><rect x="159" y="53" width="45" height="47" rx="5" transform="rotate(9 159 53)" fill="#183441"/><rect x="164" y="58" width="35" height="32" rx="2" transform="rotate(9 164 58)" fill="#c1d9d3"/><rect x="70" y="76" width="29" height="47" rx="5" transform="rotate(-17 70 76)" fill="#183441"/><rect x="74" y="81" width="21" height="34" rx="2" transform="rotate(-17 74 81)" fill="#7eb7ba"/></svg></div>
+ <div class="inst" id="inst"><img src="icons/icon-192.png" alt=""><div><b>Instale o EcoEletro</b><span>Abra direto da tela inicial, mesmo sem internet.</span></div><button class="btn" id="instBtn">Instalar</button></div>
+ <div class="status"><span class="dot" id="dot"></span><div><strong id="stT">Verificando…</strong><span id="stS"></span></div></div>
+ <div class="quick">
+  <button class="q" data-go="points"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Pontos de coleta</button>
+  <button class="q" data-go="guide"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg>O que reciclar?</button>
+  <button class="q" data-go="tips"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>Dicas de descarte</button>
+  <button class="q" id="addQ"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Indicar ponto</button>
+ </div>
+ <div class="sec"><h2>Seu impacto</h2><button class="link" data-go="tips">Registrar</button></div>
+ <div class="impact"><big id="imp1">0</big><span>aparelhos e acessórios entregues para reciclagem por você neste celular</span></div>
+ <div class="card"><div class="top"><h3>Dica rápida</h3></div><div class="meta" style="margin:0;font-size:.95rem">Faça backup e restaure o aparelho às configurações de fábrica antes de entregar. Assim seus dados não vão junto.</div><div class="row"><span></span><button class="go" data-go="tips" style="border:0">Ver dicas</button></div></div>
+ <div class="note"><span>ⓘ</span><div><b>Confirme antes de sair.</b> Horários e materiais aceitos podem mudar. Fale com o Demlurb ou o ponto antes de ir.</div></div>
+</section>
+
+<section class="screen" id="s-points">
+ <h1 class="title">Pontos de coleta</h1><p class="intro">Ecopontos em Juiz de Fora. Toque em “Abrir no mapa” para ir até lá.</p>
+ <label class="search"><span>⌕</span><input id="q" type="search" placeholder="Nome, bairro ou material" aria-label="Buscar pontos"></label>
+ <div class="chips" id="chips"><button class="chip on" data-k="Todos">Todos</button><button class="chip" data-k="open">Abertos agora</button><button class="chip" data-k="Pilhas e baterias">Pilhas e baterias</button><button class="chip" data-k="Celulares">Celulares</button><button class="chip" data-k="Computadores">Computadores</button></div>
+ <div class="sec" style="margin-top:4px"><h2 id="cnt"></h2><button class="link" id="add">＋ Indicar ponto</button></div>
+ <div id="list"></div>
+ <div class="note"><span>ⓘ</span><div>Dados divulgados pelo Demlurb em fevereiro de 2026. Confirme endereço, horário e materiais antes de ir.</div></div>
+</section>
+
+<section class="screen" id="s-guide">
+ <h1 class="title">O que reciclar?</h1><p class="intro">Toque em uma categoria para ver como preparar e entregar.</p>
+ <details><summary><span class="ic">📱</span>Celulares e tablets</summary><p>Inclua carregadores, cabos e fones. Remova o chip e o cartão de memória. Se a bateria estiver estufada, avise o ponto antes de entregar.</p></details>
+ <details><summary><span class="ic">💻</span>Computadores e periféricos</summary><p>Notebooks, teclados, mouses, roteadores e impressoras. As regras variam por ponto, então confirme. Apague o disco antes.</p></details>
+ <details><summary><span class="ic">📺</span>Televisores e eletrodomésticos</summary><p>Aparelhos grandes podem não ser aceitos em todos os ecopontos. Pergunte antes de carregar o item.</p></details>
+ <details><summary><span class="ic">🔌</span>Cabos e acessórios</summary><p>Carregadores, adaptadores, fios e fones. Junte tudo em um saco ou caixa para o transporte.</p></details>
+ <details><summary><span class="ic">🔋</span>Pilhas e baterias</summary><p>Têm coleta específica. Segundo a fonte consultada, o Ecoponto Barbosa Lage tem compartimento para pilhas e baterias de celular. Não perfure nem abra.</p></details>
+ <div class="note"><span>⚠</span><div><b>Nunca jogue no lixo comum.</b> Metais pesados e baterias contaminam solo e água.</div></div>
+ <button class="btn full" data-go="points" style="margin-top:14px">Encontrar ponto de coleta</button>
+</section>
+
+<section class="screen" id="s-tips">
+ <h1 class="title">Dicas de descarte</h1><p class="intro">Prepare o aparelho para proteger seus dados e entregar com segurança.</p>
+ <div class="tip"><i>☁️</i><div><b>Faça backup</b><span>Salve fotos, contatos e arquivos em outro aparelho ou serviço seguro.</span></div></div>
+ <div class="tip"><i>🔒</i><div><b>Apague seus dados</b><span>Saia das contas (Google, Apple, bancos) e restaure as configurações de fábrica.</span></div></div>
+ <div class="tip"><i>💾</i><div><b>Retire chip e cartão de memória</b><span>Guarde ou inutilize antes de entregar.</span></div></div>
+ <div class="tip"><i>🔋</i><div><b>Não abra nem perfure baterias</b><span>Se estiverem estufadas ou danificadas, avise o ponto antes.</span></div></div>
+ <div class="tip"><i>📦</i><div><b>Separe e proteja</b><span>Não misture com lixo comum. Embale telas e peças no transporte.</span></div></div>
+ <div class="tip"><i>📞</i><div><b>Na dúvida, pergunte primeiro</b><span>Confirme com o ponto quais itens ele aceita.</span></div></div>
+ <div class="sec"><h2>Registrar entrega</h2></div>
+ <div class="card"><div class="meta" style="margin:0">Quantos itens você entregou?</div><div class="step"><button id="m" aria-label="Menos">−</button><output id="n">1</output><button id="p" aria-label="Mais">+</button></div><button class="btn full" id="reg">Registrar entrega</button></div>
+ <div class="impact"><big id="imp2">0</big><span>itens entregues no total</span></div>
+ <button class="btn full" data-go="points" style="margin-top:6px">Encontrar ponto de coleta</button>
+</section>
+</main>
+
+<nav aria-label="Navegação principal">
+ <button class="tab on" data-go="home"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg>Início</button>
+ <button class="tab" data-go="points"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Pontos</button>
+ <button class="tab" data-go="guide"><svg viewBox="0 0 24 24"><path d="M6 9a7 7 0 0 1 11-3m1 8a7 7 0 0 1-7 6M7 14a7 7 0 0 1-1-5"/><path d="m17 3 1 3-3 1m4 7-1 3-3-1M8 20l-3-1 1-3"/></svg>Reciclar</button>
+ <button class="tab" data-go="tips"><svg viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-5-6a7 7 0 1 1 6 0c-.8.5-1 1.1-1 2h-4c0-.9-.2-1.5-1-2Z"/></svg>Dicas</button>
+</nav>
+</div>
+
+<dialog id="dlg"><form id="f" method="dialog"><h2>Indicar ponto de coleta</h2>
+ <div class="fg"><label>Nome do ponto *<input id="fn" required placeholder="Ecoponto, loja ou instituição"></label>
+ <label>Material aceito *<select id="fk" required><option value="">Selecione</option><option>Eletrônicos diversos</option><option>Celulares</option><option>Computadores</option><option>Pilhas e baterias</option></select></label>
+ <label>Endereço e bairro *<input id="fa" required placeholder="Rua, número e bairro"></label>
+ <label>Horário<input id="fh" placeholder="Confirme com o local"></label>
+ <label>Fonte da confirmação *<input id="fs" required placeholder="Site oficial ou contato direto"></label></div>
+ <p class="src">Cadastre só informações confirmadas com o local ou em canal oficial. O ponto fica salvo apenas neste aparelho.</p>
+ <div class="fb"><button type="button" class="btn alt" id="cx">Cancelar</button><button class="btn" type="submit">Salvar ponto</button></div></form></dialog>
+<dialog id="ios"><form method="dialog"><h2>Instalar no iPhone</h2><ol style="padding-left:20px;line-height:1.7"><li>Abra esta página no <b>Safari</b>.</li><li>Toque em <b>Compartilhar</b> (quadrado com seta).</li><li>Escolha <b>Adicionar à Tela de Início</b>.</li><li>Toque em <b>Adicionar</b>.</li></ol><button class="btn full">Entendi</button></form></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const S=(k,v)=>{try{if(v===undefined){return JSON.parse(localStorage.getItem(k))}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const SRC='https://tribunademinas.com.br/noticias/cidade/19-02-2026/descarte-irregular-lixo.html',H='Seg a sex, 7h às 17h · Sáb, 8h às 12h';
+const base=[['Ecoponto Aeroporto','Rua José Apolônio dos Reis, 100, Aeroporto','Eletroeletrônicos'],['Ecoponto Barbosa Lage','Rua Antônio Weitzel, s/n, Barbosa Lage','Eletroeletrônicos e pilhas/baterias de celular'],['Ecoponto Nova Benfica','Rua Francisco Pinheiro, Nova Benfica','Eletroeletrônicos'],['Ecoponto Parque das Águas','Rua José Meirelles, Parque das Águas','Eletroeletrônicos'],['Ecoponto Retiro','Rua Carlos Tavares de Pinho, Retiro','Eletroeletrônicos']].map(([name,address,mat])=>({name,address,mat,kind:name.includes('Barbosa')?'Pilhas e baterias':'Eletrônicos diversos',hours:H,src:'Demlurb (19/02/2026)',url:SRC,std:1}));
+let pts=base.concat(S('eco-extra')||[]),kind='Todos';
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function isOpen(p){if(!p.std)return null;const d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'}));const w=d.getDay(),h=d.getHours()+d.getMinutes()/60;return w>=1&&w<=5?h>=7&&h<17:w===6?h>=8&&h<12:false}
+function render(){
+ const q=$('#q').value.toLowerCase().trim();
+ const l=pts.filter(p=>(kind==='Todos'||(kind==='open'?isOpen(p):p.kind===kind))&&(p.name+p.address+p.kind+(p.mat||'')).toLowerCase().includes(q));
+ $('#cnt').textContent=l.length+(l.length===1?' ponto':' pontos');
+ $('#list').innerHTML=l.length?l.map(p=>{const o=isOpen(p);return`<article class="card"><div class="top"><span class="badge">${esc(p.kind)}</span>${o===null?'':`<span class="badge ${o?'':'closed'}">${o?'Aberto agora':'Fechado agora'}</span>`}</div><h3>${esc(p.name)}</h3><div class="meta">📍<span>${esc(p.address)}</span></div><div class="meta">🕒<span>${esc(p.hours||'Confirme o horário com o local')}</span></div>${p.mat?`<div class="meta">♻️<span>${esc(p.mat)}</span></div>`:''}<div class="row"><span class="src">Fonte: ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.src)}</a>`:esc(p.src)}</span><a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.address+', Juiz de Fora, MG')}">Abrir no mapa</a></div></article>`}).join(''):'<div class="card" style="text-align:center"><h3>Nenhum ponto encontrado</h3><div class="meta" style="justify-content:center">Tente outro termo ou filtro, ou indique um ponto novo.</div></div>';
+ const n=pts.filter(isOpen).length;$('#dot').className='dot'+(n?' open':'');
+ $('#stT').textContent=n?n+' ecopontos abertos agora':'Ecopontos fechados agora';
+ $('#stS').textContent=n?'Fecham às 17h (sáb. 12h)':'Seg a sex 7h–17h · Sáb 8h–12h';
+}
+function go(t){$$('.screen').forEach(s=>s.classList.toggle('on',s.id==='s-'+t));$$('.tab').forEach(b=>b.classList.toggle('on',b.dataset.go===t));scrollTo(0,0)}
+$$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+$('#chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;kind=b.dataset.k;$$('.chip').forEach(c=>c.classList.toggle('on',c===b));render()};
+$('#q').oninput=render;
+const dlg=$('#dlg');$('#add').onclick=$('#addQ').onclick=()=>dlg.showModal();$('#cx').onclick=()=>dlg.close();
+$('#f').onsubmit=e=>{e.preventDefault();const p={name:$('#fn').value.trim(),kind:$('#fk').value,address:$('#fa').value.trim(),hours:$('#fh').value.trim(),src:$('#fs').value.trim()};const x=(S('eco-extra')||[]);x.push(p);S('eco-extra',x);pts.push(p);e.target.reset();dlg.close();render();go('points');toast('Ponto salvo neste aparelho')};
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
+let tot=S('eco-total')||0,qty=1;
+function imp(){$('#imp1').textContent=$('#imp2').textContent=tot}imp();
+$('#m').onclick=()=>$('#n').textContent=qty=Math.max(1,qty-1);$('#p').onclick=()=>$('#n').textContent=qty=Math.min(50,qty+1);
+$('#reg').onclick=()=>{tot+=qty;S('eco-total',tot);imp();qty=1;$('#n').textContent=1;toast('Entrega registrada. Obrigado!')};
+render();
+let dp=null;const std=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+if(!std)$('#inst').classList.add('on');
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e});
+addEventListener('appinstalled',()=>{$('#inst').classList.remove('on');toast('App instalado!')});
+$('#instBtn').onclick=async()=>{if(dp){dp.prompt();await dp.userChoice;dp=null}else if(ios){$('#ios').showModal()}else{toast('Menu ⋮ do navegador > Instalar app')}};
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
