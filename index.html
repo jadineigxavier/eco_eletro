@@ -11,19 +11,19 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
 <title>EcoEletro | Descarte certo de lixo eletrônico</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-:root{--bg:#f1f6ef;--card:#fff;--ink:#12332b;--mut:#566a62;--g:#1f8a4c;--g2:#0b6b4a;--b:#1f7fd0;--line:#dbe5da;--mint:#e3f2e5;--warn:#fff3df;--warnl:#ecd2a6;--warnt:#6b4a1f;--hero1:#0b6b4a;--hero2:#2fae62;--hero3:#9ad63f;--nav:rgba(252,253,251,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88)}}
-:root[data-theme="dark"]{--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88)}
+:root{--bg:#eef7e6;--card:#fff;--ink:#12332b;--mut:#566a62;--g:#1f8a4c;--g2:#0b6b4a;--b:#1f7fd0;--line:#dbe5da;--mint:#dff1d6;--warn:#fff3df;--warnl:#ecd2a6;--warnt:#6b4a1f;--hero1:#0b6b4a;--hero2:#2fae62;--hero3:#9ad63f;--sky1:#bfe9f7;--sky2:#f3fbe9;--h1:#b8e07e;--h2:#82cc5f;--h3:#43a756;--sun:#ffd45e;--cloud:#fff;--tree:#2f8f4a;--heroink:#0f4a30;--nav:rgba(252,253,251,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88);--sky1:#10263a;--sky2:#1b3a33;--h1:#2f6040;--h2:#27774d;--h3:#1d5e3c;--sun:#e8d8a0;--cloud:#ffffff26;--tree:#14452d;--heroink:#e7f2ec}}
+:root[data-theme="dark"]{--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88);--sky1:#10263a;--sky2:#1b3a33;--h1:#2f6040;--h2:#27774d;--h3:#1d5e3c;--sun:#e8d8a0;--cloud:#ffffff26;--tree:#14452d;--heroink:#e7f2ec}
 *{box-sizing:border-box}html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-tap-highlight-color:transparent}
-body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
-h1,h2,h3{font-family:Sora,system-ui,sans-serif;letter-spacing:-.02em;margin:0}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:Fredoka,system-ui,sans-serif;letter-spacing:0;margin:0}
 button,input,select{font:inherit;color:inherit}button{cursor:pointer;touch-action:manipulation}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--b);outline-offset:2px}
 .app{max-width:480px;margin:0 auto;min-height:100dvh;padding-bottom:92px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:9px;font:800 1.3rem Sora,sans-serif;letter-spacing:-.04em}.brand b{color:var(--g)}
+.brand{display:flex;align-items:center;gap:9px;font:800 1.3rem Fredoka,sans-serif;letter-spacing:-.04em}.brand b{color:var(--g)}
 .city{font-size:.8rem;color:var(--mut);font-weight:600}
 main{padding:0 16px 16px}.screen{display:none}.screen.on{display:block}
 .hero{margin:0 -16px 16px;padding:26px 20px 30px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2) 62%,var(--hero3));position:relative;overflow:hidden;border-radius:0 0 28px 28px}
@@ -33,7 +33,7 @@ main{padding:0 16px 16px}.screen{display:none}.screen.on{display:block}
 .btn{min-height:48px;border:0;border-radius:14px;padding:0 18px;background:var(--g2);color:#fff;font-weight:800}.btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.full{width:100%}
 .status{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:14px}
 .dot{width:12px;height:12px;border-radius:50%;background:#aaa;flex:none}.dot.open{background:#2fb866;box-shadow:0 0 0 5px #2fb86633}
-.status strong{display:block;font-family:Sora,sans-serif;font-size:1.02rem}.status span{font-size:.85rem;color:var(--mut)}
+.status strong{display:block;font-family:Fredoka,sans-serif;font-size:1.02rem}.status span{font-size:.85rem;color:var(--mut)}
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
 .q{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 4px 12px;background:var(--card);border:1px solid var(--line);border-radius:18px;font-size:.78rem;font-weight:700;line-height:1.15;text-align:center;min-height:98px}
 .q svg,.tab svg{width:28px;height:28px;fill:none;stroke:var(--g);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -57,11 +57,11 @@ details p{margin:0;padding:0 16px 14px 52px;font-size:.9rem;color:var(--mut)}
 .check{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px;cursor:pointer}
 .check input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--g2);flex:none}.check b{display:block}.check span{font-size:.85rem;color:var(--mut)}
 .tip{display:flex;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px}.tip i{flex:none;width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-style:normal;font-size:1.3rem}.tip b{display:block}.tip span{font-size:.88rem;color:var(--mut)}
-.inst{display:none;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--mint);border:1px solid var(--g);margin-bottom:14px}.inst.on{display:flex}.inst img{width:48px;height:48px;border-radius:12px}.inst div{flex:1;line-height:1.25}.inst b{display:block}.inst span{font-size:.82rem;color:var(--mut)}.inst .btn{min-height:42px;padding:0 14px}
+.inst{display:none;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--mint);border:1px solid var(--g);margin-bottom:14px}.inst.on{display:flex}.inst svg{width:48px;height:48px;flex:none}.inst div{flex:1;line-height:1.25}.inst b{display:block}.inst span{font-size:.82rem;color:var(--mut)}.inst .btn{min-height:42px;padding:0 14px}
 .bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden;margin:6px 0 16px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g),var(--hero3));transition:width .3s}
 .impact{display:flex;align-items:center;gap:16px;padding:18px;border-radius:20px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2));margin-bottom:14px}
-.impact big{font:800 2.6rem/1 Sora,sans-serif}.impact span{font-size:.9rem;color:#e6f6e6}
-.step{display:flex;gap:10px;align-items:center;margin:12px 0}.step button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:1.3rem;font-weight:800}.step output{min-width:36px;text-align:center;font:800 1.3rem Sora,sans-serif}
+.impact big{font:800 2.6rem/1 Fredoka,sans-serif}.impact span{font-size:.9rem;color:#e6f6e6}
+.step{display:flex;gap:10px;align-items:center;margin:12px 0}.step button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:1.3rem;font-weight:800}.step output{min-width:36px;text-align:center;font:800 1.3rem Fredoka,sans-serif}
 nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);z-index:6}
 .tab{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;min-height:54px;font-size:.72rem;font-weight:700;color:var(--mut)}.tab svg{width:24px;height:24px;stroke:currentColor}.tab.on{color:var(--g)}
 dialog{width:min(480px,100%);max-width:none;margin:auto auto 0;padding:0;border:0;border-radius:24px 24px 0 0;background:var(--card);color:var(--ink);max-height:90dvh}dialog::backdrop{background:#0a1a1480}
@@ -69,34 +69,54 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
 .fg input,.fg select{min-height:48px;border:1px solid var(--line);border-radius:12px;padding:0 12px;background:var(--bg);font-size:16px}
 .fb{display:flex;gap:8px}.fb .btn{flex:1}
 .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}.toast.show{opacity:1}
+
+.hero{height:430px;padding:28px 20px 0;background:linear-gradient(var(--sky1),var(--sky2));color:var(--heroink);border-radius:0 0 34px 34px}
+.hero h1{max-width:none;font-size:1.95rem;line-height:1.1;color:var(--heroink)}.hero p{max-width:78%;color:var(--heroink);font-size:1rem;margin:10px 0 16px}
+.hero svg.scene{position:absolute;left:0;right:auto;bottom:0;width:100%;max-width:none;height:52%}
+.hero .cta{background:#ffb12e;color:#3a2400;box-shadow:0 6px 0 #d98a00;font-family:Fredoka,sans-serif;font-size:1.05rem;transition:transform .1s}.hero .cta:active{transform:translateY(4px);box-shadow:0 2px 0 #d98a00}
+.band{position:relative;margin:0 -16px 16px;padding:24px 20px 78px;background:linear-gradient(var(--sky1),var(--sky2));border-radius:0 0 30px 30px;overflow:hidden}
+.band h1{font-size:1.75rem;line-height:1.1;color:var(--heroink)}.band p{margin:6px 0 0;max-width:88%;color:var(--heroink);font-size:.97rem}
+.band svg{position:absolute;left:0;bottom:0;width:100%;height:70px}
+.h1{fill:var(--h1)}.h2{fill:var(--h2)}.h3{fill:var(--h3)}.tr{fill:var(--tree)}
+.card,.status,.tip,details,.check,.q,.inst{border-radius:22px;box-shadow:0 6px 16px #2a6a3a14}
+.q{border-radius:20px;font-weight:800}.q svg{width:30px;height:30px}
+.sec h2:before{content:"";display:inline-block;width:.62em;height:.62em;border-radius:0 85% 0 85%;background:var(--g);margin-right:.45em;transform:rotate(-8deg)}
+.impact{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(120deg,#157a47,#4cb85a 70%,#9ad63f)}.impact:after{content:"🌳";position:absolute;right:14px;bottom:-6px;font-size:3.4rem;opacity:.9}.impact span{max-width:62%}
+.fact{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px dashed var(--g);border-radius:22px;padding:14px 16px;margin-bottom:14px}.fact i{font-style:normal;font-size:1.6rem}.fact b{font-family:Fredoka,sans-serif;font-size:1.05rem}.fact span{display:block;font-size:.9rem;color:var(--mut)}
+.badge{font-weight:800}
 @media(max-width:360px){.hero h1{font-size:1.5rem}.q{font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="hl"><path class="h1" d="M0 56Q80 18 170 48T400 38V110H0Z"/><path class="h2" d="M0 78Q100 48 210 74T400 66V110H0Z"/><path class="tr" d="M44 66l-9 20h18zM44 56l-7 15h14zM330 58l-9 20h18zM330 48l-7 15h14z"/><path class="h3" d="M0 96Q110 80 220 94T400 90V110H0Z"/></g></defs></svg>
 <div class="app">
 <header><div class="brand"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#6dbd39" stroke-width="6" stroke-dasharray="38 76" stroke-linecap="round"/><circle cx="20" cy="20" r="18" fill="none" stroke="#1f7fd0" stroke-width="6" stroke-dasharray="38 76" stroke-dashoffset="-38" stroke-linecap="round"/><circle cx="20" cy="20" r="18" fill="none" stroke="#2fae62" stroke-width="6" stroke-dasharray="30 83" stroke-dashoffset="-76" stroke-linecap="round"/></svg>Eco<b>Eletro</b></div><div class="city">Juiz de Fora, MG</div></header>
 <main>
 
 <section class="screen on" id="s-home">
- <div class="hero"><h1>Descarte seu lixo eletrônico do jeito certo</h1><p>Encontre um ecoponto, prepare o aparelho e proteja seus dados.</p><button class="cta" data-go="points">Ver ecopontos</button>
- <svg viewBox="0 0 240 190" aria-hidden="true"><rect x="83" y="105" width="126" height="65" rx="11" fill="#3fae2a"/><path d="M75 105h143l-9 15H83z" fill="#187d37"/><path d="m141 134 8-8 8 8-8 8zm0 16 8-8 8 8-8 8z" fill="#efffcb"/><rect x="103" y="43" width="54" height="57" rx="6" transform="rotate(-8 103 43)" fill="#172f3f"/><rect x="109" y="49" width="42" height="42" rx="3" transform="rotate(-8 109 49)" fill="#91c7bf"/><rect x="159" y="53" width="45" height="47" rx="5" transform="rotate(9 159 53)" fill="#183441"/><rect x="164" y="58" width="35" height="32" rx="2" transform="rotate(9 164 58)" fill="#c1d9d3"/><rect x="70" y="76" width="29" height="47" rx="5" transform="rotate(-17 70 76)" fill="#183441"/><rect x="74" y="81" width="21" height="34" rx="2" transform="rotate(-17 74 81)" fill="#7eb7ba"/></svg></div>
- <div class="inst" id="inst"><img src="icons/icon-192.png" alt=""><div><b>Instale o EcoEletro</b><span>Abra direto da tela inicial, mesmo sem internet.</span></div><button class="btn" id="instBtn">Instalar</button></div>
+ <div class="hero"><h1>Aquele eletrônico velho? Bora dar um destino bom pra ele!</h1><p>Ache o ecoponto mais perto, veja o que pode levar e vá sem medo pelos seus dados.</p><button class="cta" data-go="points">Achar ecoponto</button>
+ <svg class="scene" viewBox="0 0 400 190" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="305" cy="58" r="40" fill="var(--sun)" opacity=".3"/><circle cx="305" cy="58" r="24" fill="var(--sun)"/><g fill="var(--cloud)"><ellipse cx="90" cy="46" rx="30" ry="10"/><ellipse cx="112" cy="39" rx="19" ry="9"/><ellipse cx="215" cy="30" rx="24" ry="8"/></g>
+ <path class="h1" d="M0 105Q70 66 150 96T300 86T400 98V190H0Z"/><path class="h2" d="M0 132Q90 98 190 126T400 118V190H0Z"/>
+ <g class="tr"><path d="M36 112l-13 28h26zM36 98l-11 24h22z"/><path d="M70 120l-11 24h22zM70 108l-9 20h18z"/><circle cx="168" cy="114" r="15"/><rect x="166" y="120" width="4" height="22"/></g>
+ <path class="h3" d="M0 160Q100 138 200 158T400 150V190H0Z"/>
+ <g transform="translate(246 108)"><path d="M6 22h58l-5 34H11z" fill="#3fae2a"/><rect x="2" y="16" width="66" height="8" rx="3" fill="#187d37"/><rect x="12" y="-2" width="14" height="22" rx="3" fill="#183441" transform="rotate(-14 19 9)"/><rect x="28" y="-12" width="26" height="28" rx="3" fill="#183441"/><rect x="31" y="-9" width="20" height="20" rx="1.5" fill="#91c7bf"/><path d="m31 38 6-6 6 6-6 6zm14 0 6-6 6 6-6 6z" fill="#efffcb"/></g>
+ <g><circle cx="40" cy="172" r="3" fill="#ffd45e"/><circle cx="60" cy="178" r="3" fill="#fff"/><circle cx="130" cy="170" r="3" fill="#ff8aa0"/><circle cx="355" cy="172" r="3" fill="#ffd45e"/><circle cx="378" cy="168" r="3" fill="#fff"/><ellipse cx="210" cy="176" rx="22" ry="9" class="tr"/></g></svg></div>
+ <div class="inst" id="inst"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#f1f6ef"/><g fill="none" stroke-width="6" stroke-linecap="round"><circle cx="24" cy="24" r="12" stroke="#6dbd39" stroke-dasharray="21 55"/><circle cx="24" cy="24" r="12" stroke="#1f7fd0" stroke-dasharray="21 55" stroke-dashoffset="-25"/><circle cx="24" cy="24" r="12" stroke="#2fae62" stroke-dasharray="21 55" stroke-dashoffset="-50"/></g></svg><div><b>Instale o EcoEletro</b><span>Abra direto da tela inicial, mesmo sem internet.</span></div><button class="btn" id="instBtn">Instalar</button></div>
  <div class="status"><span class="dot" id="dot"></span><div><strong id="stT">Verificando…</strong><span id="stS"></span></div></div>
  <div class="quick">
-  <button class="q" data-go="points"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Pontos de coleta</button>
-  <button class="q" data-go="guide"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg>O que reciclar?</button>
-  <button class="q" data-go="tips"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>Dicas de descarte</button>
+  <button class="q" data-go="points"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Onde levar</button>
+  <button class="q" data-go="guide"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg>O que pode?</button>
+  <button class="q" data-go="tips"><svg viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-5-6a7 7 0 1 1 6 0c-.8.5-1 1.1-1 2h-4c0-.9-.2-1.5-1-2Z"/></svg>Curiosidades</button>
   <button class="q" id="addQ"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Indicar ponto</button>
  </div>
- <div class="sec"><h2>Seu impacto</h2><button class="link" data-go="tips">Registrar</button></div>
- <div class="impact"><big id="imp1">0</big><span>aparelhos e acessórios entregues para reciclagem por você neste celular</span></div>
- <div class="card"><div class="top"><h3>Dica rápida</h3></div><div class="meta" style="margin:0;font-size:.95rem">Faça backup e restaure o aparelho às configurações de fábrica antes de entregar. Assim seus dados não vão junto.</div><div class="row"><span></span><button class="go" data-go="tips" style="border:0">Ver dicas</button></div></div>
+ <div class="fact"><i>💡</i><div><b>Você sabia?</b><span>Celulares e computadores têm cobre, prata e até ouro, metais que podem ser reaproveitados quando o aparelho é reciclado.</span><button class="link" data-go="tips" style="padding:6px 0 0">Ver mais curiosidades</button></div></div>
+ <div class="card"><div class="top"><h3>Antes de entregar</h3></div><div class="meta" style="margin:0;font-size:.95rem">Faz backup e restaura o aparelho de fábrica. Assim seus dados não vão junto.</div><div class="row"><span></span><button class="go" data-go="tips" style="border:0">Ver dicas</button></div></div>
  <div class="note"><span>ⓘ</span><div><b>Confirme antes de sair.</b> Horários e materiais aceitos podem mudar. Fale com o Demlurb ou o ponto antes de ir.</div></div>
 </section>
 
 <section class="screen" id="s-points">
- <h1 class="title">Pontos de coleta</h1><p class="intro">Ecopontos em Juiz de Fora. Toque em “Abrir no mapa” para ir até lá.</p>
+ <div class="band"><h1>Onde levar seu lixo eletrônico</h1><p>Bora achar o ecoponto mais perto de você. É só tocar em “Abrir no mapa”.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
  <label class="search"><span>⌕</span><input id="q" type="search" placeholder="Nome, bairro ou material" aria-label="Buscar pontos"></label>
  <div class="chips" id="chips"><button class="chip on" data-k="Todos">Todos</button><button class="chip" data-k="open">Abertos agora</button><button class="chip" data-k="Pilhas e baterias">Pilhas e baterias</button><button class="chip" data-k="Celulares">Celulares</button><button class="chip" data-k="Computadores">Computadores</button></div>
  <div class="sec" style="margin-top:4px"><h2 id="cnt"></h2><button class="link" id="add">＋ Indicar ponto</button></div>
@@ -105,28 +125,29 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
 </section>
 
 <section class="screen" id="s-guide">
- <h1 class="title">O que reciclar?</h1><p class="intro">Toque em uma categoria para ver como preparar e entregar.</p>
+ <div class="band"><h1>O que pode levar?</h1><p>Toca numa categoria pra ver como preparar e entregar.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
  <details><summary><span class="ic">📱</span>Celulares e tablets</summary><p>Inclua carregadores, cabos e fones. Remova o chip e o cartão de memória. Se a bateria estiver estufada, avise o ponto antes de entregar.</p></details>
  <details><summary><span class="ic">💻</span>Computadores e periféricos</summary><p>Notebooks, teclados, mouses, roteadores e impressoras. As regras variam por ponto, então confirme. Apague o disco antes.</p></details>
  <details><summary><span class="ic">📺</span>Televisores e eletrodomésticos</summary><p>Aparelhos grandes podem não ser aceitos em todos os ecopontos. Pergunte antes de carregar o item.</p></details>
  <details><summary><span class="ic">🔌</span>Cabos e acessórios</summary><p>Carregadores, adaptadores, fios e fones. Junte tudo em um saco ou caixa para o transporte.</p></details>
  <details><summary><span class="ic">🔋</span>Pilhas e baterias</summary><p>Têm coleta específica. Segundo a fonte consultada, o Ecoponto Barbosa Lage tem compartimento para pilhas e baterias de celular. Não perfure nem abra.</p></details>
  <div class="note"><span>⚠</span><div><b>Nunca jogue no lixo comum.</b> Metais pesados e baterias contaminam solo e água.</div></div>
- <button class="btn full" data-go="points" style="margin-top:14px">Encontrar ponto de coleta</button>
+ <button class="btn full" data-go="points" style="margin-top:14px">Achar um ecoponto</button>
 </section>
 
 <section class="screen" id="s-tips">
- <h1 class="title">Dicas de descarte</h1><p class="intro">Prepare o aparelho para proteger seus dados e entregar com segurança.</p>
- <div class="tip"><i>☁️</i><div><b>Faça backup</b><span>Salve fotos, contatos e arquivos em outro aparelho ou serviço seguro.</span></div></div>
- <div class="tip"><i>🔒</i><div><b>Apague seus dados</b><span>Saia das contas (Google, Apple, bancos) e restaure as configurações de fábrica.</span></div></div>
- <div class="tip"><i>💾</i><div><b>Retire chip e cartão de memória</b><span>Guarde ou inutilize antes de entregar.</span></div></div>
- <div class="tip"><i>🔋</i><div><b>Não abra nem perfure baterias</b><span>Se estiverem estufadas ou danificadas, avise o ponto antes.</span></div></div>
- <div class="tip"><i>📦</i><div><b>Separe e proteja</b><span>Não misture com lixo comum. Embale telas e peças no transporte.</span></div></div>
- <div class="tip"><i>📞</i><div><b>Na dúvida, pergunte primeiro</b><span>Confirme com o ponto quais itens ele aceita.</span></div></div>
- <div class="sec"><h2>Registrar entrega</h2></div>
- <div class="card"><div class="meta" style="margin:0">Quantos itens você entregou?</div><div class="step"><button id="m" aria-label="Menos">−</button><output id="n">1</output><button id="p" aria-label="Mais">+</button></div><button class="btn full" id="reg">Registrar entrega</button></div>
- <div class="impact"><big id="imp2">0</big><span>itens entregues no total</span></div>
- <button class="btn full" data-go="points" style="margin-top:6px">Encontrar ponto de coleta</button>
+ <div class="band"><h1>Dicas e curiosidades</h1><p>Toque pra ler. Tem coisa que você vai querer contar pros amigos.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
+ <details><summary><span class="ic">🗑️</span>Por que não pode ir pro lixo comum?</summary><p>Celulares, pilhas e placas têm metais pesados como chumbo e cádmio. No aterro, eles podem escorrer para o solo e a água. Além disso, o lixo comum não recupera os materiais valiosos que o aparelho tem dentro.</p></details>
+ <details><summary><span class="ic">🪙</span>Tem ouro e prata no seu celular?</summary><p>Tem sim, em pequenas quantidades. As placas de circuito de celulares e computadores usam cobre, prata, ouro e outros metais. Quando o aparelho é reciclado do jeito certo, esses materiais podem voltar para a produção de novos produtos.</p></details>
+ <details><summary><span class="ic">🔥</span>Bateria estufada é coisa séria</summary><p>Baterias de íon-lítio podem esquentar e pegar fogo se forem perfuradas, amassadas ou ficarem estufadas. Por isso, nunca tente abrir nem forçar. Guarde o aparelho em local seco e fresco e avise o ecoponto antes de entregar.</p></details>
+ <details><summary><span class="ic">🔒</span>Seus dados continuam lá se você não apagar</summary><p>Antes de entregar, faça backup, saia das contas e restaure o aparelho para as configurações de fábrica. Em computador antigo, se tiver dúvida, retire o HD ou o SSD e guarde com você. Também tire o chip e o cartão de memória.</p></details>
+ <details><summary><span class="ic">⚖️</span>Existe lei que obriga a recolher</summary><p>A Política Nacional de Resíduos Sólidos prevê a logística reversa: fabricantes, importadores e comerciantes de eletrônicos têm responsabilidade de dar destino ao produto depois do uso. Vale perguntar na loja onde você comprou se ela recebe o aparelho velho.</p></details>
+ <details><summary><span class="ic">🔌</span>Cabos e carregadores também contam</summary><p>Muita gente esquece, mas fios, carregadores e fones têm cobre dentro e não devem ir pro lixo comum. Junte tudo numa caixinha e leve junto com o aparelho.</p></details>
+ <details><summary><span class="ic">📺</span>TV de tubo tem chumbo no vidro</summary><p>Televisores e monitores antigos de tubo (CRT) têm chumbo no vidro da tela. Não quebre o aparelho nem tente desmontar. Pergunte ao ecoponto se aceita itens grandes antes de carregar.</p></details>
+ <details><summary><span class="ic">♻️</span>Ainda funciona? Doe!</summary><p>Antes de descartar, pense em reaproveitar. Doar ou vender um aparelho que ainda funciona prolonga a vida dele e evita que mais lixo seja gerado. Se não tiver conserto nem uso, aí sim leve ao ecoponto.</p></details>
+ <details><summary><span class="ic">🌍</span>Um dos lixos que mais crescem no mundo</summary><p>Segundo o monitoramento global de lixo eletrônico da ONU, os resíduos eletrônicos estão entre os que mais crescem no mundo. Cada aparelho que você leva ao lugar certo faz diferença.</p></details>
+ <div class="note"><span>ⓘ</span><div>Na dúvida, pergunte primeiro: cada ecoponto tem regras próprias sobre o que aceita.</div></div>
+ <button class="btn full" data-go="points" style="margin-top:14px">Achar um ecoponto</button>
 </section>
 </main>
 
@@ -173,10 +194,6 @@ $('#q').oninput=render;
 const dlg=$('#dlg');$('#add').onclick=$('#addQ').onclick=()=>dlg.showModal();$('#cx').onclick=()=>dlg.close();
 $('#f').onsubmit=e=>{e.preventDefault();const p={name:$('#fn').value.trim(),kind:$('#fk').value,address:$('#fa').value.trim(),hours:$('#fh').value.trim(),src:$('#fs').value.trim()};const x=(S('eco-extra')||[]);x.push(p);S('eco-extra',x);pts.push(p);e.target.reset();dlg.close();render();go('points');toast('Ponto salvo neste aparelho')};
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
-let tot=S('eco-total')||0,qty=1;
-function imp(){$('#imp1').textContent=$('#imp2').textContent=tot}imp();
-$('#m').onclick=()=>$('#n').textContent=qty=Math.max(1,qty-1);$('#p').onclick=()=>$('#n').textContent=qty=Math.min(50,qty+1);
-$('#reg').onclick=()=>{tot+=qty;S('eco-total',tot);imp();qty=1;$('#n').textContent=1;toast('Entrega registrada. Obrigado!')};
 render();
 let dp=null;const std=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
