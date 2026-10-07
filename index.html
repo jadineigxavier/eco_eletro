@@ -86,6 +86,8 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
 .badge{font-weight:800}
 @media(max-width:360px){.hero h1{font-size:1.5rem}.q{font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.search{padding:0 6px 0 14px;border-radius:20px;box-shadow:0 6px 16px #2a6a3a14}.search svg{flex:none;color:var(--g)}.sbtn{flex:none;min-height:40px;border:0;border-radius:14px;padding:0 16px;background:var(--g2);color:#fff;font-weight:800}.badge.near{background:#ffb12e;color:#3a2400}
+.steps{list-style:none;margin:0 0 14px;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px 16px 10px 62px;margin-bottom:8px;box-shadow:0 6px 16px #2a6a3a14}.steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--g2);display:grid;place-items:center;font:700 1.05rem Fredoka,sans-serif}.steps b{display:block;font-family:Fredoka,sans-serif}.steps span{display:block;font-size:.88rem;color:var(--mut)}.steps .link{padding:4px 0 6px}.steps li:last-child{padding-bottom:14px}
 </style>
 </head>
 <body>
@@ -104,20 +106,16 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
  <g><circle cx="40" cy="172" r="3" fill="#ffd45e"/><circle cx="60" cy="178" r="3" fill="#fff"/><circle cx="130" cy="170" r="3" fill="#ff8aa0"/><circle cx="355" cy="172" r="3" fill="#ffd45e"/><circle cx="378" cy="168" r="3" fill="#fff"/><ellipse cx="210" cy="176" rx="22" ry="9" class="tr"/></g></svg></div>
  <div class="inst" id="inst"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#f1f6ef"/><g fill="none" stroke-width="6" stroke-linecap="round"><circle cx="24" cy="24" r="12" stroke="#6dbd39" stroke-dasharray="21 55"/><circle cx="24" cy="24" r="12" stroke="#1f7fd0" stroke-dasharray="21 55" stroke-dashoffset="-25"/><circle cx="24" cy="24" r="12" stroke="#2fae62" stroke-dasharray="21 55" stroke-dashoffset="-50"/></g></svg><div><b>Instale o EcoEletro</b><span>Abra direto da tela inicial, mesmo sem internet.</span></div><button class="btn" id="instBtn">Instalar</button></div>
  <div class="status"><span class="dot" id="dot"></span><div><strong id="stT">Verificando…</strong><span id="stS"></span></div></div>
- <div class="quick">
-  <button class="q" data-go="points"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Onde levar</button>
-  <button class="q" data-go="guide"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg>O que pode?</button>
-  <button class="q" data-go="tips"><svg viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-5-6a7 7 0 1 1 6 0c-.8.5-1 1.1-1 2h-4c0-.9-.2-1.5-1-2Z"/></svg>Curiosidades</button>
-  <button class="q" id="addQ"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Indicar ponto</button>
- </div>
+ <div class="sec"><h2>Como funciona</h2></div>
+ <ol class="steps"><li><b>Veja o que pode levar</b><span>Celulares, computadores, cabos e pilhas têm regras próprias.</span><button class="link" data-go="guide">Ver a lista</button></li><li><b>Prepare o aparelho</b><span>Faça backup e apague seus dados antes de entregar.</span><button class="link" data-go="tips">Ver as dicas</button></li><li><b>Leve ao ecoponto</b><span>Confira endereço e horário antes de sair de casa.</span></li></ol>
  <div class="fact"><i>💡</i><div><b>Você sabia?</b><span>Celulares e computadores têm cobre, prata e até ouro, metais que podem ser reaproveitados quando o aparelho é reciclado.</span><button class="link" data-go="tips" style="padding:6px 0 0">Ver mais curiosidades</button></div></div>
- <div class="card"><div class="top"><h3>Antes de entregar</h3></div><div class="meta" style="margin:0;font-size:.95rem">Faz backup e restaura o aparelho de fábrica. Assim seus dados não vão junto.</div><div class="row"><span></span><button class="go" data-go="tips" style="border:0">Ver dicas</button></div></div>
  <div class="note"><span>ⓘ</span><div><b>Confirme antes de sair.</b> Horários e materiais aceitos podem mudar. Fale com o Demlurb ou o ponto antes de ir.</div></div>
 </section>
 
 <section class="screen" id="s-points">
- <div class="band"><h1>Onde levar seu lixo eletrônico</h1><p>Bora achar o ecoponto mais perto de você. É só tocar em “Abrir no mapa”.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
- <label class="search"><span>⌕</span><input id="q" type="search" placeholder="Nome, bairro ou material" aria-label="Buscar pontos"></label>
+ <div class="band"><h1>Onde levar seu lixo eletrônico</h1><p>Digite seu bairro ou rua e veja qual ecoponto fica mais perto de você.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
+ <form class="search" id="sf" role="search"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Digite seu bairro ou rua" aria-label="Seu bairro ou endereço" enterkeyhint="search"><button class="sbtn" type="submit">Buscar</button></form>
+ <button class="link" id="geo" type="button" style="margin:4px 2px 0">📍 Usar minha localização</button><div class="src" id="gs" role="status" style="margin:2px 2px 0;font-size:.84rem"></div>
  <div class="chips" id="chips"><button class="chip on" data-k="Todos">Todos</button><button class="chip" data-k="open">Abertos agora</button><button class="chip" data-k="Pilhas e baterias">Pilhas e baterias</button><button class="chip" data-k="Celulares">Celulares</button><button class="chip" data-k="Computadores">Computadores</button></div>
  <div class="sec" style="margin-top:4px"><h2 id="cnt"></h2><button class="link" id="add">＋ Indicar ponto</button></div>
  <div id="list"></div>
@@ -132,7 +130,6 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
  <details><summary><span class="ic">🔌</span>Cabos e acessórios</summary><p>Carregadores, adaptadores, fios e fones. Junte tudo em um saco ou caixa para o transporte.</p></details>
  <details><summary><span class="ic">🔋</span>Pilhas e baterias</summary><p>Têm coleta específica. Segundo a fonte consultada, o Ecoponto Barbosa Lage tem compartimento para pilhas e baterias de celular. Não perfure nem abra.</p></details>
  <div class="note"><span>⚠</span><div><b>Nunca jogue no lixo comum.</b> Metais pesados e baterias contaminam solo e água.</div></div>
- <button class="btn full" data-go="points" style="margin-top:14px">Achar um ecoponto</button>
 </section>
 
 <section class="screen" id="s-tips">
@@ -147,7 +144,6 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
  <details><summary><span class="ic">♻️</span>Ainda funciona? Doe!</summary><p>Antes de descartar, pense em reaproveitar. Doar ou vender um aparelho que ainda funciona prolonga a vida dele e evita que mais lixo seja gerado. Se não tiver conserto nem uso, aí sim leve ao ecoponto.</p></details>
  <details><summary><span class="ic">🌍</span>Um dos lixos que mais crescem no mundo</summary><p>Segundo o monitoramento global de lixo eletrônico da ONU, os resíduos eletrônicos estão entre os que mais crescem no mundo. Cada aparelho que você leva ao lugar certo faz diferença.</p></details>
  <div class="note"><span>ⓘ</span><div>Na dúvida, pergunte primeiro: cada ecoponto tem regras próprias sobre o que aceita.</div></div>
- <button class="btn full" data-go="points" style="margin-top:14px">Achar um ecoponto</button>
 </section>
 </main>
 
@@ -179,10 +175,11 @@ let pts=base.concat(S('eco-extra')||[]),kind='Todos';
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function isOpen(p){if(!p.std)return null;const d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'}));const w=d.getDay(),h=d.getHours()+d.getMinutes()/60;return w>=1&&w<=5?h>=7&&h<17:w===6?h>=8&&h<12:false}
 function render(){
- const q=$('#q').value.toLowerCase().trim();
+ const q=txt.toLowerCase().trim();
  const l=pts.filter(p=>(kind==='Todos'||(kind==='open'?isOpen(p):p.kind===kind))&&(p.name+p.address+p.kind+(p.mat||'')).toLowerCase().includes(q));
+ if(ref){l.forEach(p=>p.d=p.ll?hav(ref,p.ll):null);l.sort((a,b)=>(a.d==null)-(b.d==null)||a.d-b.d)}
  $('#cnt').textContent=l.length+(l.length===1?' ponto':' pontos');
- $('#list').innerHTML=l.length?l.map(p=>{const o=isOpen(p);return`<article class="card"><div class="top"><span class="badge">${esc(p.kind)}</span>${o===null?'':`<span class="badge ${o?'':'closed'}">${o?'Aberto agora':'Fechado agora'}</span>`}</div><h3>${esc(p.name)}</h3><div class="meta">📍<span>${esc(p.address)}</span></div><div class="meta">🕒<span>${esc(p.hours||'Confirme o horário com o local')}</span></div>${p.mat?`<div class="meta">♻️<span>${esc(p.mat)}</span></div>`:''}<div class="row"><span class="src">Fonte: ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.src)}</a>`:esc(p.src)}</span><a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.address+', Juiz de Fora, MG')}">Abrir no mapa</a></div></article>`}).join(''):'<div class="card" style="text-align:center"><h3>Nenhum ponto encontrado</h3><div class="meta" style="justify-content:center">Tente outro termo ou filtro, ou indique um ponto novo.</div></div>';
+ $('#list').innerHTML=l.length?l.map((p,i)=>{const o=isOpen(p);return`<article class="card"><div class="top"><span class="badge">${esc(p.kind)}</span>${ref&&p.d!=null?`<span class="badge near">${i===0?'Mais perto · ':''}${fmt(p.d)}</span>`:''}${o===null?'':`<span class="badge ${o?'':'closed'}">${o?'Aberto agora':'Fechado agora'}</span>`}</div><h3>${esc(p.name)}</h3><div class="meta">📍<span>${esc(p.address)}</span></div><div class="meta">🕒<span>${esc(p.hours||'Confirme o horário com o local')}</span></div>${p.mat?`<div class="meta">♻️<span>${esc(p.mat)}</span></div>`:''}<div class="row"><span class="src">Fonte: ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.src)}</a>`:esc(p.src)}</span><a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.address+', Juiz de Fora, MG')}">Abrir no mapa</a></div></article>`}).join(''):'<div class="card" style="text-align:center"><h3>Nenhum ponto encontrado</h3><div class="meta" style="justify-content:center">Tente outro termo ou filtro, ou indique um ponto novo.</div></div>';
  const n=pts.filter(isOpen).length;$('#dot').className='dot'+(n?' open':'');
  $('#stT').textContent=n?n+' ecopontos abertos agora':'Ecopontos fechados agora';
  $('#stS').textContent=n?'Fecham às 17h (sáb. 12h)':'Seg a sex 7h–17h · Sáb 8h–12h';
@@ -190,8 +187,26 @@ function render(){
 function go(t){$$('.screen').forEach(s=>s.classList.toggle('on',s.id==='s-'+t));$$('.tab').forEach(b=>b.classList.toggle('on',b.dataset.go===t));scrollTo(0,0)}
 $$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
 $('#chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;kind=b.dataset.k;$$('.chip').forEach(c=>c.classList.toggle('on',c===b));render()};
-$('#q').oninput=render;
-const dlg=$('#dlg');$('#add').onclick=$('#addQ').onclick=()=>dlg.showModal();$('#cx').onclick=()=>dlg.close();
+let ref=null,txt='';
+const hav=(a,b)=>{const r=Math.PI/180,x=(b[0]-a[0])*r,y=(b[1]-a[1])*r,h=Math.sin(x/2)**2+Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(y/2)**2;return 12742*Math.asin(Math.sqrt(h))};
+const fmt=d=>d<1?Math.round(d*1000)+' m':d.toFixed(1).replace('.',',')+' km';
+const cache=S('eco-geo')||{},wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function geo(q){if(cache[q])return cache[q];await wait(1100);const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&bounded=1&viewbox=-43.55,-21.6,-43.15,-21.9&q='+encodeURIComponent(q+', Juiz de Fora, MG'));const j=await r.json();if(!j[0])return null;cache[q]=[+j[0].lat,+j[0].lon];S('eco-geo',cache);return cache[q]}
+async function locPts(){for(const p of pts){if(p.ll)continue;const k=p.address.replace(/, s\/n/,'');p.ll=await geo(k)||await geo(k.split(',').pop().trim())}}
+$('#sf').onsubmit=async e=>{e.preventDefault();const v=$('#q').value.trim(),g=$('#gs');
+ if(!v){ref=null;txt='';g.textContent='';render();return}
+ g.textContent='Procurando…';
+ try{const c=await geo(v);
+  if(!c){ref=null;txt=v;g.textContent='Não achei esse endereço em Juiz de Fora. Tente só o bairro, por exemplo “Centro”. Por enquanto, mostrando pontos que contêm o texto digitado.';render();return}
+  ref=c;txt='';g.textContent='Calculando distâncias…';render();await locPts();
+  g.textContent='Do mais perto para o mais longe de “'+v+'”. Distância em linha reta.';render()
+ }catch(err){ref=null;txt=v;g.textContent='Não consegui consultar o mapa agora. Mostrando só pelo texto digitado.';render()}};
+$('#geo').onclick=()=>{const g=$('#gs');if(!navigator.geolocation){g.textContent='Seu aparelho não permite localização. Digite o bairro.';return}
+ g.textContent='Pegando sua localização…';
+ navigator.geolocation.getCurrentPosition(async p=>{ref=[p.coords.latitude,p.coords.longitude];txt='';$('#q').value='';g.textContent='Calculando distâncias…';render();
+  try{await locPts();g.textContent='Do mais perto para o mais longe de você. Distância em linha reta.';render()}catch(e){g.textContent='Não consegui calcular as distâncias agora.'}},
+ ()=>{g.textContent='Não consegui pegar sua localização. Digite seu bairro ou rua.'},{timeout:10000})};
+const dlg=$('#dlg');$('#add').onclick=()=>dlg.showModal();$('#cx').onclick=()=>dlg.close();
 $('#f').onsubmit=e=>{e.preventDefault();const p={name:$('#fn').value.trim(),kind:$('#fk').value,address:$('#fa').value.trim(),hours:$('#fh').value.trim(),src:$('#fs').value.trim()};const x=(S('eco-extra')||[]);x.push(p);S('eco-extra',x);pts.push(p);e.target.reset();dlg.close();render();go('points');toast('Ponto salvo neste aparelho')};
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
 render();
