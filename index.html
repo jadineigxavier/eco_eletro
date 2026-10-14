@@ -13,81 +13,1075 @@
 <title>EcoEletro | Descarte certo de lixo eletrônico</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-:root{--bg:#eef7e6;--card:#fff;--ink:#12332b;--mut:#566a62;--g:#1f8a4c;--g2:#0b6b4a;--b:#1f7fd0;--line:#dbe5da;--mint:#dff1d6;--warn:#fff3df;--warnl:#ecd2a6;--warnt:#6b4a1f;--hero1:#0b6b4a;--hero2:#2fae62;--hero3:#9ad63f;--sky1:#bfe9f7;--sky2:#f3fbe9;--h1:#b8e07e;--h2:#82cc5f;--h3:#43a756;--sun:#ffd45e;--cloud:#fff;--tree:#2f8f4a;--heroink:#0f4a30;--nav:rgba(252,253,251,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88);--sky1:#10263a;--sky2:#1b3a33;--h1:#2f6040;--h2:#27774d;--h3:#1d5e3c;--sun:#e8d8a0;--cloud:#ffffff26;--tree:#14452d;--heroink:#e7f2ec}}
-:root[data-theme="dark"]{--bg:#0e1814;--card:#15231e;--ink:#e7f2ec;--mut:#9db3a9;--g:#52c883;--g2:#52c883;--b:#5aaef0;--line:#25362f;--mint:#1c3328;--warn:#2b2417;--warnl:#52411f;--warnt:#e8cf9d;--nav:rgba(18,30,25,.88);--sky1:#10263a;--sky2:#1b3a33;--h1:#2f6040;--h2:#27774d;--h3:#1d5e3c;--sun:#e8d8a0;--cloud:#ffffff26;--tree:#14452d;--heroink:#e7f2ec}
-*{box-sizing:border-box}html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-tap-highlight-color:transparent}
-body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
-h1,h2,h3{font-family:Fredoka,system-ui,sans-serif;letter-spacing:0;margin:0}
-button,input,select{font:inherit;color:inherit}button{cursor:pointer;touch-action:manipulation}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--b);outline-offset:2px}
-.app{max-width:480px;margin:0 auto;min-height:100dvh;padding-bottom:92px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:9px;font:800 1.3rem Fredoka,sans-serif;letter-spacing:-.04em}.brand b{color:var(--g)}
-.city{font-size:.8rem;color:var(--mut);font-weight:600}
-main{padding:0 16px 16px}.screen{display:none}.screen.on{display:block}
-.hero{margin:0 -16px 16px;padding:26px 20px 30px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2) 62%,var(--hero3));position:relative;overflow:hidden;border-radius:0 0 28px 28px}
-.hero h1{font-size:1.75rem;line-height:1.1;max-width:62%}.hero p{margin:10px 0 16px;max-width:60%;font-size:.95rem;line-height:1.4;color:#eaf8e6}
-.hero svg{position:absolute;right:-6px;bottom:6px;width:46%;max-width:210px}
-.cta{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:0;border-radius:14px;background:#fff;color:#0b5a3d;font-weight:800;box-shadow:0 6px 16px #0003;position:relative;z-index:1}
-.btn{min-height:48px;border:0;border-radius:14px;padding:0 18px;background:var(--g2);color:#fff;font-weight:800}.btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.full{width:100%}
-.status{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:14px}
-.dot{width:12px;height:12px;border-radius:50%;background:#aaa;flex:none}.dot.open{background:#2fb866;box-shadow:0 0 0 5px #2fb86633}
-.status strong{display:block;font-family:Fredoka,sans-serif;font-size:1.02rem}.status span{font-size:.85rem;color:var(--mut)}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
-.q{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 4px 12px;background:var(--card);border:1px solid var(--line);border-radius:18px;font-size:.78rem;font-weight:700;line-height:1.15;text-align:center;min-height:98px}
-.q svg,.tab svg{width:28px;height:28px;fill:none;stroke:var(--g);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.q:active{background:var(--mint)}
-.sec{display:flex;justify-content:space-between;align-items:center;margin:20px 2px 10px}.sec h2{font-size:1.15rem}.link{border:0;background:none;color:var(--g);font-weight:800;font-size:.85rem;padding:8px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:10px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:4px 10px;font-size:.74rem;font-weight:800;background:var(--mint);color:var(--g2)}
-.badge.closed{background:#8882;color:var(--mut)}
-.card h3{font-size:1.02rem;margin-bottom:6px}.meta{display:flex;gap:8px;font-size:.88rem;color:var(--mut);margin-top:5px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px}.src{font-size:.74rem;color:var(--mut)}.src a{color:var(--g)}
-.go{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:12px;background:var(--mint);color:var(--g2);font-weight:800;font-size:.85rem;text-decoration:none;white-space:nowrap}
-.search{display:flex;align-items:center;gap:10px;height:52px;padding:0 14px;background:var(--card);border:1px solid var(--line);border-radius:16px}.search input{flex:1;min-width:0;border:0;outline:0;background:none;font-size:16px}
-.chips{display:flex;gap:8px;overflow-x:auto;margin:12px -16px;padding:0 16px 2px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
-.chip{flex:none;min-height:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.85rem;font-weight:700;color:var(--mut)}.chip.on{background:var(--mint);border-color:var(--g);color:var(--g2)}
-.title{font-size:1.9rem;line-height:1.1;margin:18px 2px 6px}.intro{color:var(--mut);margin:0 2px 14px;font-size:.95rem}
-.note{display:flex;gap:10px;background:var(--warn);border:1px solid var(--warnl);color:var(--warnt);border-radius:14px;padding:12px;font-size:.84rem;margin-top:12px}
-details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px}summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;font-weight:700;cursor:pointer;min-height:56px}summary::-webkit-details-marker{display:none}
-summary .ic{font-size:1.4rem}summary:after{content:"＋";margin-left:auto;color:var(--g);font-weight:800}details[open] summary:after{content:"－"}
-details p{margin:0;padding:0 16px 14px 52px;font-size:.9rem;color:var(--mut)}
-.check{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px;cursor:pointer}
-.check input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--g2);flex:none}.check b{display:block}.check span{font-size:.85rem;color:var(--mut)}
-.tip{display:flex;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:8px}.tip i{flex:none;width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-style:normal;font-size:1.3rem}.tip b{display:block}.tip span{font-size:.88rem;color:var(--mut)}
-.inst{display:none;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--mint);border:1px solid var(--g);margin-bottom:14px}.inst.on{display:flex}.inst svg{width:48px;height:48px;flex:none}.inst div{flex:1;line-height:1.25}.inst b{display:block}.inst span{font-size:.82rem;color:var(--mut)}.inst .btn{min-height:42px;padding:0 14px}
-.bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden;margin:6px 0 16px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g),var(--hero3));transition:width .3s}
-.impact{display:flex;align-items:center;gap:16px;padding:18px;border-radius:20px;color:#fff;background:linear-gradient(120deg,var(--hero1),var(--hero2));margin-bottom:14px}
-.impact big{font:800 2.6rem/1 Fredoka,sans-serif}.impact span{font-size:.9rem;color:#e6f6e6}
-.step{display:flex;gap:10px;align-items:center;margin:12px 0}.step button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:1.3rem;font-weight:800}.step output{min-width:36px;text-align:center;font:800 1.3rem Fredoka,sans-serif}
-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);z-index:6}
-.tab{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;min-height:54px;font-size:.72rem;font-weight:700;color:var(--mut)}.tab svg{width:24px;height:24px;stroke:currentColor}.tab.on{color:var(--g)}
-dialog{width:min(480px,100%);max-width:none;margin:auto auto 0;padding:0;border:0;border-radius:24px 24px 0 0;background:var(--card);color:var(--ink);max-height:90dvh}dialog::backdrop{background:#0a1a1480}
-form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:grid;gap:12px;margin:14px 0}.fg label{display:grid;gap:5px;font-size:.82rem;font-weight:700;color:var(--mut)}
-.fg input,.fg select{min-height:48px;border:1px solid var(--line);border-radius:12px;padding:0 12px;background:var(--bg);font-size:16px}
-.fb{display:flex;gap:8px}.fb .btn{flex:1}
-.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 16px;border-radius:12px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}.toast.show{opacity:1}
+/* ================================================================
+   1. Cores, tipografia e estrutura geral
+   ================================================================ */
+:root {
+  --bg:#eef7e6;
+  --card:#fff;
+  --ink:#12332b;
+  --mut:#566a62;
+  --g:#1f8a4c;
+  --g2:#0b6b4a;
+  --b:#1f7fd0;
+  --line:#dbe5da;
+  --mint:#dff1d6;
+  --warn:#fff3df;
+  --warnl:#ecd2a6;
+  --warnt:#6b4a1f;
+  --hero1:#0b6b4a;
+  --hero2:#2fae62;
+  --hero3:#9ad63f;
+  --sky1:#bfe9f7;
+  --sky2:#f3fbe9;
+  --h1:#b8e07e;
+  --h2:#82cc5f;
+  --h3:#43a756;
+  --sun:#ffd45e;
+  --cloud:#fff;
+  --tree:#2f8f4a;
+  --heroink:#0f4a30;
+  --nav:rgba(252,253,251,.88);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)
+}
 
-.hero{height:430px;padding:28px 20px 0;background:linear-gradient(var(--sky1),var(--sky2));color:var(--heroink);border-radius:0 0 34px 34px}
-.hero h1{max-width:none;font-size:1.95rem;line-height:1.1;color:var(--heroink)}.hero p{max-width:78%;color:var(--heroink);font-size:1rem;margin:10px 0 16px}
-.hero svg.scene{position:absolute;left:0;right:auto;bottom:0;width:100%;max-width:none;height:52%}
-.hero .cta{background:#ffb12e;color:#3a2400;box-shadow:0 6px 0 #d98a00;font-family:Fredoka,sans-serif;font-size:1.05rem;transition:transform .1s}.hero .cta:active{transform:translateY(4px);box-shadow:0 2px 0 #d98a00}
-.band{position:relative;margin:0 -16px 16px;padding:24px 20px 78px;background:linear-gradient(var(--sky1),var(--sky2));border-radius:0 0 30px 30px;overflow:hidden}
-.band h1{font-size:1.75rem;line-height:1.1;color:var(--heroink)}.band p{margin:6px 0 0;max-width:88%;color:var(--heroink);font-size:.97rem}
-.band svg{position:absolute;left:0;bottom:0;width:100%;height:70px}
-.h1{fill:var(--h1)}.h2{fill:var(--h2)}.h3{fill:var(--h3)}.tr{fill:var(--tree)}
-.card,.status,.tip,details,.check,.q,.inst{border-radius:22px;box-shadow:0 6px 16px #2a6a3a14}
-.q{border-radius:20px;font-weight:800}.q svg{width:30px;height:30px}
-.sec h2:before{content:"";display:inline-block;width:.62em;height:.62em;border-radius:0 85% 0 85%;background:var(--g);margin-right:.45em;transform:rotate(-8deg)}
-.impact{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(120deg,#157a47,#4cb85a 70%,#9ad63f)}.impact:after{content:"🌳";position:absolute;right:14px;bottom:-6px;font-size:3.4rem;opacity:.9}.impact span{max-width:62%}
-.fact{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px dashed var(--g);border-radius:22px;padding:14px 16px;margin-bottom:14px}.fact i{font-style:normal;font-size:1.6rem}.fact b{font-family:Fredoka,sans-serif;font-size:1.05rem}.fact span{display:block;font-size:.9rem;color:var(--mut)}
-.badge{font-weight:800}
-@media(max-width:360px){.hero h1{font-size:1.5rem}.q{font-size:.72rem}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-.search{padding:0 6px 0 14px;border-radius:20px;box-shadow:0 6px 16px #2a6a3a14}.search svg{flex:none;color:var(--g)}.sbtn{flex:none;min-height:40px;border:0;border-radius:14px;padding:0 16px;background:var(--g2);color:#fff;font-weight:800}.badge.near{background:#ffb12e;color:#3a2400}
-.steps{list-style:none;margin:0 0 14px;padding:0;counter-reset:s}.steps li{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px 16px 10px 62px;margin-bottom:8px;box-shadow:0 6px 16px #2a6a3a14}.steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--g2);display:grid;place-items:center;font:700 1.05rem Fredoka,sans-serif}.steps b{display:block;font-family:Fredoka,sans-serif}.steps span{display:block;font-size:.88rem;color:var(--mut)}.steps .link{padding:4px 0 6px}.steps li:last-child{padding-bottom:14px}
+/* Mantém contraste e cores adequadas quando o aparelho usa tema escuro. */
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#0e1814;
+    --card:#15231e;
+    --ink:#e7f2ec;
+    --mut:#9db3a9;
+    --g:#52c883;
+    --g2:#52c883;
+    --b:#5aaef0;
+    --line:#25362f;
+    --mint:#1c3328;
+    --warn:#2b2417;
+    --warnl:#52411f;
+    --warnt:#e8cf9d;
+    --nav:rgba(18,30,25,.88);
+    --sky1:#10263a;
+    --sky2:#1b3a33;
+    --h1:#2f6040;
+    --h2:#27774d;
+    --h3:#1d5e3c;
+    --sun:#e8d8a0;
+    --cloud:#ffffff26;
+    --tree:#14452d;
+    --heroink:#e7f2ec
+  }
+
+}
+
+:root[data-theme="dark"] {
+  --bg:#0e1814;
+  --card:#15231e;
+  --ink:#e7f2ec;
+  --mut:#9db3a9;
+  --g:#52c883;
+  --g2:#52c883;
+  --b:#5aaef0;
+  --line:#25362f;
+  --mint:#1c3328;
+  --warn:#2b2417;
+  --warnl:#52411f;
+  --warnt:#e8cf9d;
+  --nav:rgba(18,30,25,.88);
+  --sky1:#10263a;
+  --sky2:#1b3a33;
+  --h1:#2f6040;
+  --h2:#27774d;
+  --h3:#1d5e3c;
+  --sun:#e8d8a0;
+  --cloud:#ffffff26;
+  --tree:#14452d;
+  --heroink:#e7f2ec
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  height:100%;
+  scroll-padding-top:env(safe-area-inset-top,0px);
+  -webkit-tap-highlight-color:transparent
+}
+
+body {
+  margin:0;
+  min-height:100%;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.5 Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif
+}
+
+h1,h2,h3 {
+  font-family:Fredoka,system-ui,sans-serif;
+  letter-spacing:0;
+  margin:0
+}
+
+button,input,select {
+  font:inherit;
+  color:inherit
+}
+
+button {
+  cursor:pointer;
+  touch-action:manipulation
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible {
+  outline:3px solid var(--b);
+  outline-offset:2px
+}
+
+.app {
+  max-width:480px;
+  margin:0 auto;
+  min-height:100dvh;
+  padding-bottom:92px
+}
+
+header {
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 18px;
+  background:var(--nav);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line)
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font:800 1.3rem Fredoka,sans-serif;
+  letter-spacing:-.04em
+}
+
+.brand b {
+  color:var(--g)
+}
+
+.city {
+  font-size:.8rem;
+  color:var(--mut);
+  font-weight:600
+}
+
+main {
+  padding:0 16px 16px
+}
+
+.screen {
+  display:none
+}
+
+.screen.on {
+  display:block
+}
+
+.hero {
+  margin:0 -16px 16px;
+  padding:26px 20px 30px;
+  color:#fff;
+  background:linear-gradient(120deg,var(--hero1),var(--hero2) 62%,var(--hero3));
+  position:relative;
+  overflow:hidden;
+  border-radius:0 0 28px 28px
+}
+
+.hero h1 {
+  font-size:1.75rem;
+  line-height:1.1;
+  max-width:62%
+}
+
+.hero p {
+  margin:10px 0 16px;
+  max-width:60%;
+  font-size:.95rem;
+  line-height:1.4;
+  color:#eaf8e6
+}
+
+.hero svg {
+  position:absolute;
+  right:-6px;
+  bottom:6px;
+  width:46%;
+  max-width:210px
+}
+
+.cta {
+  display:inline-flex;
+  align-items:center;
+  min-height:46px;
+  padding:0 18px;
+  border:0;
+  border-radius:14px;
+  background:#fff;
+  color:#0b5a3d;
+  font-weight:800;
+  box-shadow:0 6px 16px #0003;
+  position:relative;
+  z-index:1
+}
+
+.btn {
+  min-height:48px;
+  border:0;
+  border-radius:14px;
+  padding:0 18px;
+  background:var(--g2);
+  color:#fff;
+  font-weight:800
+}
+
+.btn.alt {
+  background:var(--card);
+  color:var(--ink);
+  border:1px solid var(--line)
+}
+
+.btn.full {
+  width:100%
+}
+
+.status {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px 16px;
+  margin-bottom:14px
+}
+
+.dot {
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#aaa;
+  flex:none
+}
+
+.dot.open {
+  background:#2fb866;
+  box-shadow:0 0 0 5px #2fb86633
+}
+
+.status strong {
+  display:block;
+  font-family:Fredoka,sans-serif;
+  font-size:1.02rem
+}
+
+.status span {
+  font-size:.85rem;
+  color:var(--mut)
+}
+
+.quick {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-bottom:18px
+}
+
+.q {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:7px;
+  padding:14px 4px 12px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  font-size:.78rem;
+  font-weight:700;
+  line-height:1.15;
+  text-align:center;
+  min-height:98px
+}
+
+.q svg,.tab svg {
+  width:28px;
+  height:28px;
+  fill:none;
+  stroke:var(--g);
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+
+.q:active {
+  background:var(--mint)
+}
+
+.sec {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:20px 2px 10px
+}
+
+.sec h2 {
+  font-size:1.15rem
+}
+
+.link {
+  border:0;
+  background:none;
+  color:var(--g);
+  font-weight:800;
+  font-size:.85rem;
+  padding:8px 0
+}
+
+.card {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:10px
+}
+
+.top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px
+}
+
+.badge {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border-radius:99px;
+  padding:4px 10px;
+  font-size:.74rem;
+  font-weight:800;
+  background:var(--mint);
+  color:var(--g2)
+}
+
+.badge.closed {
+  background:#8882;
+  color:var(--mut)
+}
+
+.card h3 {
+  font-size:1.02rem;
+  margin-bottom:6px
+}
+
+.meta {
+  display:flex;
+  gap:8px;
+  font-size:.88rem;
+  color:var(--mut);
+  margin-top:5px
+}
+
+.row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  margin-top:12px
+}
+
+.src {
+  font-size:.74rem;
+  color:var(--mut)
+}
+
+.src a {
+  color:var(--g)
+}
+
+.go {
+  display:inline-flex;
+  align-items:center;
+  min-height:40px;
+  padding:0 14px;
+  border-radius:12px;
+  background:var(--mint);
+  color:var(--g2);
+  font-weight:800;
+  font-size:.85rem;
+  text-decoration:none;
+  white-space:nowrap
+}
+
+.search {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  height:52px;
+  padding:0 14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px
+}
+
+.search input {
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:none;
+  font-size:16px
+}
+
+.chips {
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  margin:12px -16px;
+  padding:0 16px 2px;
+  scrollbar-width:none
+}
+
+.chips::-webkit-scrollbar {
+  display:none
+}
+
+.chip {
+  flex:none;
+  min-height:40px;
+  padding:0 14px;
+  border-radius:99px;
+  border:1px solid var(--line);
+  background:var(--card);
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--mut)
+}
+
+.chip.on {
+  background:var(--mint);
+  border-color:var(--g);
+  color:var(--g2)
+}
+
+.title {
+  font-size:1.9rem;
+  line-height:1.1;
+  margin:18px 2px 6px
+}
+
+.intro {
+  color:var(--mut);
+  margin:0 2px 14px;
+  font-size:.95rem
+}
+
+.note {
+  display:flex;
+  gap:10px;
+  background:var(--warn);
+  border:1px solid var(--warnl);
+  color:var(--warnt);
+  border-radius:14px;
+  padding:12px;
+  font-size:.84rem;
+  margin-top:12px
+}
+
+details {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  margin-bottom:8px
+}
+
+summary {
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  font-weight:700;
+  cursor:pointer;
+  min-height:56px
+}
+
+summary::-webkit-details-marker {
+  display:none
+}
+
+summary .ic {
+  font-size:1.4rem
+}
+
+summary:after {
+  content:"＋";
+  margin-left:auto;
+  color:var(--g);
+  font-weight:800
+}
+
+details[open] summary:after {
+  content:"－"
+}
+
+details p {
+  margin:0;
+  padding:0 16px 14px 52px;
+  font-size:.9rem;
+  color:var(--mut)
+}
+
+.check {
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:14px 16px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  margin-bottom:8px;
+  cursor:pointer
+}
+
+.check input {
+  width:24px;
+  height:24px;
+  margin:2px 0 0;
+  accent-color:var(--g2);
+  flex:none
+}
+
+.check b {
+  display:block
+}
+
+.check span {
+  font-size:.85rem;
+  color:var(--mut)
+}
+
+.tip {
+  display:flex;
+  gap:14px;
+  padding:14px 16px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  margin-bottom:8px
+}
+
+.tip i {
+  flex:none;
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  background:var(--mint);
+  display:grid;
+  place-items:center;
+  font-style:normal;
+  font-size:1.3rem
+}
+
+.tip b {
+  display:block
+}
+
+.tip span {
+  font-size:.88rem;
+  color:var(--mut)
+}
+
+.inst {
+  display:none;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  border-radius:18px;
+  background:var(--mint);
+  border:1px solid var(--g);
+  margin-bottom:14px
+}
+
+.inst.on {
+  display:flex
+}
+
+.inst svg {
+  width:48px;
+  height:48px;
+  flex:none
+}
+
+.inst div {
+  flex:1;
+  line-height:1.25
+}
+
+.inst b {
+  display:block
+}
+
+.inst span {
+  font-size:.82rem;
+  color:var(--mut)
+}
+
+.inst .btn {
+  min-height:42px;
+  padding:0 14px
+}
+
+.bar {
+  height:10px;
+  border-radius:9px;
+  background:var(--line);
+  overflow:hidden;
+  margin:6px 0 16px
+}
+
+.bar i {
+  display:block;
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,var(--g),var(--hero3));
+  transition:width .3s
+}
+
+.impact {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:18px;
+  border-radius:20px;
+  color:#fff;
+  background:linear-gradient(120deg,var(--hero1),var(--hero2));
+  margin-bottom:14px
+}
+
+.impact big {
+  font:800 2.6rem/1 Fredoka,sans-serif
+}
+
+.impact span {
+  font-size:.9rem;
+  color:#e6f6e6
+}
+
+.step {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin:12px 0
+}
+
+.step button {
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--card);
+  font-size:1.3rem;
+  font-weight:800
+}
+
+.step output {
+  min-width:36px;
+  text-align:center;
+  font:800 1.3rem Fredoka,sans-serif
+}
+
+nav {
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(480px,100%);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--nav);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-top:1px solid var(--line);
+  z-index:6
+}
+
+.tab {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2px;
+  border:0;
+  background:none;
+  min-height:54px;
+  font-size:.72rem;
+  font-weight:700;
+  color:var(--mut)
+}
+
+.tab svg {
+  width:24px;
+  height:24px;
+  stroke:currentColor
+}
+
+.tab.on {
+  color:var(--g)
+}
+
+dialog {
+  width:min(480px,100%);
+  max-width:none;
+  margin:auto auto 0;
+  padding:0;
+  border:0;
+  border-radius:24px 24px 0 0;
+  background:var(--card);
+  color:var(--ink);
+  max-height:90dvh
+}
+
+dialog::backdrop {
+  background:#0a1a1480
+}
+
+form {
+  padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))
+}
+
+.fg {
+  display:grid;
+  gap:12px;
+  margin:14px 0
+}
+
+.fg label {
+  display:grid;
+  gap:5px;
+  font-size:.82rem;
+  font-weight:700;
+  color:var(--mut)
+}
+
+.fg input,.fg select {
+  min-height:48px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:0 12px;
+  background:var(--bg);
+  font-size:16px
+}
+
+.fb {
+  display:flex;
+  gap:8px
+}
+
+.fb .btn {
+  flex:1
+}
+
+.toast {
+  position:fixed;
+  left:50%;
+  bottom:96px;
+  transform:translateX(-50%);
+  background:var(--ink);
+  color:var(--bg);
+  padding:11px 16px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:.9rem;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s;
+  z-index:20
+}
+
+.toast.show {
+  opacity:1
+}
+
+.hero {
+  height:430px;
+  padding:28px 20px 0;
+  background:linear-gradient(var(--sky1),var(--sky2));
+  color:var(--heroink);
+  border-radius:0 0 34px 34px
+}
+
+.hero h1 {
+  max-width:none;
+  font-size:1.95rem;
+  line-height:1.1;
+  color:var(--heroink)
+}
+
+.hero p {
+  max-width:78%;
+  color:var(--heroink);
+  font-size:1rem;
+  margin:10px 0 16px
+}
+
+.hero svg.scene {
+  position:absolute;
+  left:0;
+  right:auto;
+  bottom:0;
+  width:100%;
+  max-width:none;
+  height:52%
+}
+
+.hero .cta {
+  background:#ffb12e;
+  color:#3a2400;
+  box-shadow:0 6px 0 #d98a00;
+  font-family:Fredoka,sans-serif;
+  font-size:1.05rem;
+  transition:transform .1s
+}
+
+.hero .cta:active {
+  transform:translateY(4px);
+  box-shadow:0 2px 0 #d98a00
+}
+
+.band {
+  position:relative;
+  margin:0 -16px 16px;
+  padding:24px 20px 78px;
+  background:linear-gradient(var(--sky1),var(--sky2));
+  border-radius:0 0 30px 30px;
+  overflow:hidden
+}
+
+.band h1 {
+  font-size:1.75rem;
+  line-height:1.1;
+  color:var(--heroink)
+}
+
+.band p {
+  margin:6px 0 0;
+  max-width:88%;
+  color:var(--heroink);
+  font-size:.97rem
+}
+
+.band svg {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:70px
+}
+
+.h1 {
+  fill:var(--h1)
+}
+
+.h2 {
+  fill:var(--h2)
+}
+
+.h3 {
+  fill:var(--h3)
+}
+
+.tr {
+  fill:var(--tree)
+}
+
+.card,.status,.tip,details,.check,.q,.inst {
+  border-radius:22px;
+  box-shadow:0 6px 16px #2a6a3a14
+}
+
+.q {
+  border-radius:20px;
+  font-weight:800
+}
+
+.q svg {
+  width:30px;
+  height:30px
+}
+
+.sec h2:before {
+  content:"";
+  display:inline-block;
+  width:.62em;
+  height:.62em;
+  border-radius:0 85% 0 85%;
+  background:var(--g);
+  margin-right:.45em;
+  transform:rotate(-8deg)
+}
+
+.impact {
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  background:linear-gradient(120deg,#157a47,#4cb85a 70%,#9ad63f)
+}
+
+.impact:after {
+  content:"🌳";
+  position:absolute;
+  right:14px;
+  bottom:-6px;
+  font-size:3.4rem;
+  opacity:.9
+}
+
+.impact span {
+  max-width:62%
+}
+
+.fact {
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--card);
+  border:2px dashed var(--g);
+  border-radius:22px;
+  padding:14px 16px;
+  margin-bottom:14px
+}
+
+.fact i {
+  font-style:normal;
+  font-size:1.6rem
+}
+
+.fact b {
+  font-family:Fredoka,sans-serif;
+  font-size:1.05rem
+}
+
+.fact span {
+  display:block;
+  font-size:.9rem;
+  color:var(--mut)
+}
+
+.badge {
+  font-weight:800
+}
+
+@media(max-width:360px) {
+  .hero h1 {
+    font-size:1.5rem
+  }
+
+  .q {
+    font-size:.72rem
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    transition:none!important
+  }
+
+}
+
+.search {
+  padding:0 6px 0 14px;
+  border-radius:20px;
+  box-shadow:0 6px 16px #2a6a3a14
+}
+
+.search svg {
+  flex:none;
+  color:var(--g)
+}
+
+.sbtn {
+  flex:none;
+  min-height:40px;
+  border:0;
+  border-radius:14px;
+  padding:0 16px;
+  background:var(--g2);
+  color:#fff;
+  font-weight:800
+}
+
+.badge.near {
+  background:#ffb12e;
+  color:#3a2400
+}
+
+.steps {
+  list-style:none;
+  margin:0 0 14px;
+  padding:0;
+  counter-reset:s
+}
+
+.steps li {
+  counter-increment:s;
+  position:relative;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:14px 16px 10px 62px;
+  margin-bottom:8px;
+  box-shadow:0 6px 16px #2a6a3a14
+}
+
+.steps li:before {
+  content:counter(s);
+  position:absolute;
+  left:16px;
+  top:14px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--mint);
+  color:var(--g2);
+  display:grid;
+  place-items:center;
+  font:700 1.05rem Fredoka,sans-serif
+}
+
+.steps b {
+  display:block;
+  font-family:Fredoka,sans-serif
+}
+
+.steps span {
+  display:block;
+  font-size:.88rem;
+  color:var(--mut)
+}
+
+.steps .link {
+  padding:4px 0 6px
+}
+
+.steps li:last-child {
+  padding-bottom:14px
+}
 </style>
 </head>
 <body>
@@ -133,16 +1127,20 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
 </section>
 
 <section class="screen" id="s-tips">
- <div class="band"><h1>Dicas e curiosidades</h1><p>Toque pra ler. Tem coisa que você vai querer contar pros amigos.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
- <details><summary><span class="ic">🗑️</span>Por que não pode ir pro lixo comum?</summary><p>Celulares, pilhas e placas têm metais pesados como chumbo e cádmio. No aterro, eles podem escorrer para o solo e a água. Além disso, o lixo comum não recupera os materiais valiosos que o aparelho tem dentro.</p></details>
- <details><summary><span class="ic">🪙</span>Tem ouro e prata no seu celular?</summary><p>Tem sim, em pequenas quantidades. As placas de circuito de celulares e computadores usam cobre, prata, ouro e outros metais. Quando o aparelho é reciclado do jeito certo, esses materiais podem voltar para a produção de novos produtos.</p></details>
- <details><summary><span class="ic">🔥</span>Bateria estufada é coisa séria</summary><p>Baterias de íon-lítio podem esquentar e pegar fogo se forem perfuradas, amassadas ou ficarem estufadas. Por isso, nunca tente abrir nem forçar. Guarde o aparelho em local seco e fresco e avise o ecoponto antes de entregar.</p></details>
- <details><summary><span class="ic">🔒</span>Seus dados continuam lá se você não apagar</summary><p>Antes de entregar, faça backup, saia das contas e restaure o aparelho para as configurações de fábrica. Em computador antigo, se tiver dúvida, retire o HD ou o SSD e guarde com você. Também tire o chip e o cartão de memória.</p></details>
- <details><summary><span class="ic">⚖️</span>Existe lei que obriga a recolher</summary><p>A Política Nacional de Resíduos Sólidos prevê a logística reversa: fabricantes, importadores e comerciantes de eletrônicos têm responsabilidade de dar destino ao produto depois do uso. Vale perguntar na loja onde você comprou se ela recebe o aparelho velho.</p></details>
- <details><summary><span class="ic">🔌</span>Cabos e carregadores também contam</summary><p>Muita gente esquece, mas fios, carregadores e fones têm cobre dentro e não devem ir pro lixo comum. Junte tudo numa caixinha e leve junto com o aparelho.</p></details>
- <details><summary><span class="ic">📺</span>TV de tubo tem chumbo no vidro</summary><p>Televisores e monitores antigos de tubo (CRT) têm chumbo no vidro da tela. Não quebre o aparelho nem tente desmontar. Pergunte ao ecoponto se aceita itens grandes antes de carregar.</p></details>
- <details><summary><span class="ic">♻️</span>Ainda funciona? Doe!</summary><p>Antes de descartar, pense em reaproveitar. Doar ou vender um aparelho que ainda funciona prolonga a vida dele e evita que mais lixo seja gerado. Se não tiver conserto nem uso, aí sim leve ao ecoponto.</p></details>
- <details><summary><span class="ic">🌍</span>Um dos lixos que mais crescem no mundo</summary><p>Segundo o monitoramento global de lixo eletrônico da ONU, os resíduos eletrônicos estão entre os que mais crescem no mundo. Cada aparelho que você leva ao lugar certo faz diferença.</p></details>
+ <div class="band"><h1>Dicas e curiosidades</h1><p>Cuide dos seus aparelhos antes do descarte e descubra por que a reciclagem eletrônica importa.</p><svg viewBox="0 0 400 110" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#hl"/></svg></div>
+ <div class="sec"><h2>Dicas práticas</h2></div>
+ <p class="intro">Passos simples para proteger sua saúde, seus dados e os materiais que podem ser reaproveitados.</p>
+ <details><summary><span class="ic">🗑️</span>Separe do lixo comum</summary><p>Celulares, pilhas e placas eletrônicas podem conter substâncias que precisam de manejo adequado. Quando esses itens vão para o lixo comum, deixam de passar por uma cadeia preparada para separar componentes e recuperar materiais. Guarde os eletrônicos fora da lixeira doméstica e confirme qual ponto recebe cada tipo de item.</p></details>
+ <details><summary><span class="ic">🔥</span>Tenha cuidado com bateria estufada</summary><p>Uma bateria de íon-lítio inchada, perfurada ou amassada pode aquecer e causar incêndio. Não aperte, não tente abrir e não coloque o aparelho no lixo comum. Mantenha-o longe de fontes de calor, em local seco, e avise o ecoponto antes de levar para receber orientação sobre a entrega.</p></details>
+ <details><summary><span class="ic">🔒</span>Apague seus dados antes de entregar</summary><p>Faça uma cópia de segurança do que deseja guardar, encerre as sessões das suas contas e restaure o celular às configurações de fábrica. Retire o chip e o cartão de memória. Em computadores, verifique se o disco contém arquivos pessoais; se não souber apagá-lo com segurança, peça ajuda técnica antes de encaminhar o equipamento.</p></details>
+ <details><summary><span class="ic">🔌</span>Junte cabos e acessórios</summary><p>Carregadores, adaptadores, fios, teclados, mouses e fones também são resíduos eletrônicos. Reúna os itens em uma caixa ou sacola resistente para não perder peças pequenas no transporte. Antes de sair, confirme se o ponto escolhido aceita esses acessórios junto com o aparelho principal.</p></details>
+ <details><summary><span class="ic">📺</span>Confirme a coleta de aparelhos grandes</summary><p>Televisores, monitores e eletrodomésticos ocupam bastante espaço e podem não ser recebidos em todos os locais. Modelos antigos de tubo também exigem cuidado especial e não devem ser quebrados ou desmontados em casa. Ligue para o ecoponto antes de transportar o equipamento e pergunte sobre o tamanho aceito.</p></details>
+ <details><summary><span class="ic">♻️</span>Se ainda funciona, considere reutilizar</summary><p>Um aparelho em bom estado pode continuar útil para outra pessoa. Considere consertar, doar ou vender antes de encaminhá-lo à reciclagem; isso prolonga a vida do produto e pode evitar a compra de outro. Se ele não tiver conserto ou não puder ser reaproveitado, procure uma coleta adequada.</p></details>
+ <div class="sec"><h2>Curiosidades</h2></div>
+ <p class="intro">Entenda o que existe dentro dos aparelhos e como a logística reversa ajuda a dar um destino correto aos resíduos.</p>
+ <details><summary><span class="ic">🪙</span>Seu celular contém metais reaproveitáveis</summary><p>As placas de circuito de celulares e computadores usam cobre e podem conter pequenas quantidades de metais como prata e ouro. Esses materiais estão distribuídos em componentes minúsculos, então não vale a pena tentar extraí-los em casa. A reciclagem feita por empresas especializadas separa os componentes com segurança e permite que parte dos materiais retorne à indústria.</p></details>
+ <details><summary><span class="ic">⚖️</span>A logística reversa envolve empresas</summary><p>A Política Nacional de Resíduos Sólidos estabelece a logística reversa para várias categorias de produtos, incluindo eletroeletrônicos. Na prática, fabricantes, importadores, distribuidores e comerciantes participam de sistemas para receber e encaminhar produtos após o uso. Consulte a loja ou o fabricante para saber se há um programa de devolução disponível para o seu aparelho.</p></details>
+ <details><summary><span class="ic">🌍</span>O lixo eletrônico cresce no mundo todo</summary><p>Relatórios internacionais acompanham o aumento dos resíduos eletrônicos e a diferença entre o volume descartado e o que é coletado formalmente. Cada aparelho encaminhado por uma rota adequada ajuda a manter materiais úteis no ciclo produtivo e reduz o descarte irregular. Separar o equipamento e buscar informação sobre a coleta local são atitudes pequenas que melhoram esse caminho.</p></details>
  <div class="note"><span>ⓘ</span><div>Na dúvida, pergunte primeiro: cada ecoponto tem regras próprias sobre o que aceita.</div></div>
 </section>
 </main>
@@ -167,13 +1165,19 @@ form{padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}.fg{display:
 <div class="toast" id="toast" role="status"></div>
 
 <script>
+// ================================================================
+// Armazenamento local e atalhos para elementos da página
+// ================================================================
 const S=(k,v)=>{try{if(v===undefined){return JSON.parse(localStorage.getItem(k))}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const SRC='https://tribunademinas.com.br/noticias/cidade/19-02-2026/descarte-irregular-lixo.html',H='Seg a sex, 7h às 17h · Sáb, 8h às 12h';
+// Pontos de referência iniciais. Os dados indicados pelo usuário ficam no aparelho.
 const base=[['Ecoponto Aeroporto','Rua José Apolônio dos Reis, 100, Aeroporto','Eletroeletrônicos'],['Ecoponto Barbosa Lage','Rua Antônio Weitzel, s/n, Barbosa Lage','Eletroeletrônicos e pilhas/baterias de celular'],['Ecoponto Nova Benfica','Rua Francisco Pinheiro, Nova Benfica','Eletroeletrônicos'],['Ecoponto Parque das Águas','Rua José Meirelles, Parque das Águas','Eletroeletrônicos'],['Ecoponto Retiro','Rua Carlos Tavares de Pinho, Retiro','Eletroeletrônicos']].map(([name,address,mat])=>({name,address,mat,kind:name.includes('Barbosa')?'Pilhas e baterias':'Eletrônicos diversos',hours:H,src:'Demlurb (19/02/2026)',url:SRC,std:1}));
 let pts=base.concat(S('eco-extra')||[]),kind='Todos';
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Calcula o status dos pontos padrão usando o horário local de Juiz de Fora.
 function isOpen(p){if(!p.std)return null;const d=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'}));const w=d.getDay(),h=d.getHours()+d.getMinutes()/60;return w>=1&&w<=5?h>=7&&h<17:w===6?h>=8&&h<12:false}
+// Aplica os filtros, atualiza os cartões e mostra o resumo de funcionamento.
 function render(){
  const q=txt.toLowerCase().trim();
  const l=pts.filter(p=>(kind==='Todos'||(kind==='open'?isOpen(p):p.kind===kind))&&(p.name+p.address+p.kind+(p.mat||'')).toLowerCase().includes(q));
@@ -184,13 +1188,16 @@ function render(){
  $('#stT').textContent=n?n+' ecopontos abertos agora':'Ecopontos fechados agora';
  $('#stS').textContent=n?'Fecham às 17h (sáb. 12h)':'Seg a sex 7h–17h · Sáb 8h–12h';
 }
+// Troca de tela e mantém a navegação inferior sincronizada.
 function go(t){$$('.screen').forEach(s=>s.classList.toggle('on',s.id==='s-'+t));$$('.tab').forEach(b=>b.classList.toggle('on',b.dataset.go===t));scrollTo(0,0)}
 $$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
 $('#chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;kind=b.dataset.k;$$('.chip').forEach(c=>c.classList.toggle('on',c===b));render()};
 let ref=null,txt='';
+// Distância aproximada em linha reta entre duas coordenadas geográficas (Haversine).
 const hav=(a,b)=>{const r=Math.PI/180,x=(b[0]-a[0])*r,y=(b[1]-a[1])*r,h=Math.sin(x/2)**2+Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(y/2)**2;return 12742*Math.asin(Math.sqrt(h))};
 const fmt=d=>d<1?Math.round(d*1000)+' m':d.toFixed(1).replace('.',',')+' km';
 const cache=S('eco-geo')||{},wait=ms=>new Promise(r=>setTimeout(r,ms));
+// Busca coordenadas no OpenStreetMap e guarda o resultado para evitar consultas repetidas.
 async function geo(q){if(cache[q])return cache[q];await wait(1100);const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&bounded=1&viewbox=-43.55,-21.6,-43.15,-21.9&q='+encodeURIComponent(q+', Juiz de Fora, MG'));const j=await r.json();if(!j[0])return null;cache[q]=[+j[0].lat,+j[0].lon];S('eco-geo',cache);return cache[q]}
 async function locPts(){for(const p of pts){if(p.ll)continue;const k=p.address.replace(/, s\/n/,'');p.ll=await geo(k)||await geo(k.split(',').pop().trim())}}
 $('#sf').onsubmit=async e=>{e.preventDefault();const v=$('#q').value.trim(),g=$('#gs');
@@ -206,9 +1213,11 @@ $('#geo').onclick=()=>{const g=$('#gs');if(!navigator.geolocation){g.textContent
  navigator.geolocation.getCurrentPosition(async p=>{ref=[p.coords.latitude,p.coords.longitude];txt='';$('#q').value='';g.textContent='Calculando distâncias…';render();
   try{await locPts();g.textContent='Do mais perto para o mais longe de você. Distância em linha reta.';render()}catch(e){g.textContent='Não consegui calcular as distâncias agora.'}},
  ()=>{g.textContent='Não consegui pegar sua localização. Digite seu bairro ou rua.'},{timeout:10000})};
+// Cadastro opcional: o ponto novo é salvo somente no armazenamento deste navegador.
 const dlg=$('#dlg');$('#add').onclick=()=>dlg.showModal();$('#cx').onclick=()=>dlg.close();
 $('#f').onsubmit=e=>{e.preventDefault();const p={name:$('#fn').value.trim(),kind:$('#fk').value,address:$('#fa').value.trim(),hours:$('#fh').value.trim(),src:$('#fs').value.trim()};const x=(S('eco-extra')||[]);x.push(p);S('eco-extra',x);pts.push(p);e.target.reset();dlg.close();render();go('points');toast('Ponto salvo neste aparelho')};
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
+// Configuração da instalação PWA: botão do navegador, instruções para iOS e cache offline.
 render();
 let dp=null;const std=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
